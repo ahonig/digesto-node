@@ -1,0 +1,104 @@
+<%- include ('partials/_header'); %>
+<%- include ('partials/_navMenu'); %>
+<%- include ('partials/_bodyUpper'); %>	
+<div id="content">
+	<div class="row">
+		<div class="col-xs-12 col-sm-7 col-md-7 col-lg-4">
+			<h1 class="page-title txt-color-blueDark">
+				<i class="fa fa-fw fa-user"></i> 
+					Configuracion 
+				<span>> 
+					Eliminar Publicacion
+				</span>
+			</h1>
+		</div>
+    </div>
+    
+    <section id="widget-grid" class="">
+        <div class="row">
+            <article class="col-sm-12 col-md-12 col-lg-12">
+                <div class="jarviswidget jarviswidget-color-blueDark" id="wid-id-1" data-widget-editbutton="false" data-widget-custombutton="false" data-widget-togglebutton="false" data-widget-deletebutton="false">
+                    <header>
+                        <span class="widget-icon"> <i class="fa fa-plus"></i> </span>
+                        <h2>Complete el formulario </h2>				
+                    </header>
+                    <div>
+                        <div class="jarviswidget-editbox">
+                        </div>
+                        <div class="widget-body no-padding">
+                            <form id="deletePublication-form" class="smart-form" novalidate="novalidate" method="POST">
+                                <fieldset>
+                                    <section>
+                                        <label class="input">
+                                            <input type="text" name="publ_titulo" placeholder="Titulo" value="<%= publicacion.publ_titulo %>" readonly>
+                                            <b class="tooltip tooltip-bottom-right">Ingrese su Descripcion</b> </label>
+                                    </section>
+
+                                    <div class="row">
+                                        <section class="col col-8">
+											<select name="pagi_codigo" class="select2">
+                                                <% for(var i =0; i < paginas.length; i++){ %>
+													<option value="<%= paginas[i].pagi_codigo %>" <%= (paginas[i].pagi_codigo == publicacion.pagi_codigo ? 'selected="selected"' : '') %> ><%= paginas[i].pagi_codigo %> - <%= paginas[i].pagi_descripcion %></option>	
+												<% } %>
+											</select> <i></i>
+                                        </section>
+                                    </div>
+
+                                    <section>
+                                        <label class="input">
+                                            <input type="number" name="publ_orden" placeholder="Nro. Orden" value="<%= publicacion.publ_orden %>" readonly>
+                                            <b class="tooltip tooltip-bottom-right">Ingrese su nombre</b> </label>
+                                    </section>
+
+                                    <section>
+                                        <label> Contenido </label>
+										<div class="summernote">
+										</div>
+										<input type="hidden" name="publ_contenido" placeholder="Contenido" value="<%= publicacion.publ_contenido %>">
+										<b class="tooltip tooltip-bottom-right">Ingrese el Contenido</b>
+                                    </section>
+                                <footer>
+                                    <button type="submit" class="btn btn-primary">
+                                        Eliminar
+                                    </button>
+                                </footer>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+</div>
+<%- include ('partials/_bodyBottom'); %>	
+<script src="/js/plugin/select2/select2.min.js"></script>
+<script src="/js/plugin/summernote/summernote.min.js"></script>
+
+<script>
+	$(document).ready(function() {
+	
+	
+		pageSetUp();
+        
+
+        $('select').prop('disabled', true);
+		$('.summernote').summernote({
+			height: 200,
+			toolbar: [
+		    ['style', ['style']],
+		    ['font', ['bold', 'italic', 'underline', 'clear']],
+		    ['fontname', ['fontname']],
+		    ['color', ['color']],
+		    ['para', ['ul', 'ol', 'paragraph']],
+		    ['height', ['height']],
+		    ['table', ['table']],
+		    ['insert', ['link', 'picture', 'hr']],
+		    ['view', ['fullscreen', 'codeview', 'help']]
+		  ]
+		});
+        $('.summernote').summernote("code",$("[name='publ_contenido']").val());
+        $('.summernote').summernote('disable');
+	});
+	
+</script>
+<%- include ('partials/_footer'); %>

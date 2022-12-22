@@ -1,0 +1,2696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Title -->
+  <title>Exclusive SVG Set - Front Documentation | Front - Responsive Website Template</title>
+
+  <!-- Required Meta Tags Always Come First -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="../../favicon.ico">
+
+  <!-- CSS Implementing Plugins -->
+  <link rel="stylesheet" href="../../assets/vendor/font-awesome/css/fontawesome-all.min.css">
+  <link rel="stylesheet" href="../../assets/vendor/animate.css/animate.min.css">
+  <link rel="stylesheet" href="../../assets/vendor/hs-megamenu/src/hs.megamenu.css">
+  <link rel="stylesheet" href="../../assets/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css">
+  <link rel="stylesheet" href="../../documentation/assets/vendor/jquery-ui/themes/base/jquery-ui.min.css">
+  <link rel="stylesheet" href="../../documentation/assets/vendor/prism/prism.css">
+
+  <!-- CSS Front Template -->
+  <link rel="stylesheet" href="../../assets/css/theme.css">
+
+  <!-- CSS Front Doc -->
+  <link rel="stylesheet" href="../../documentation/assets/css/docs.css">
+</head>
+<body>
+  <!-- ========== HEADER ========== -->
+  <header id="header" class="u-header u-header--starter">
+    <nav id="logoAndNav" class="navbar navbar-dark fixed-top bg-primary flex-nowrap p-0">
+      <div class="col-md-3 col-xl-2 bg-md-primary-darker navbar-brand u-header__navbar-brand u-header__navbar-brand-center mr-0 py-3">
+        <a class="u-header__navbar-brand-text-white d-flex" href="../index.html" aria-label="Front">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px" height="32px" viewBox="0 0 46 46" xml:space="preserve" style="margin-bottom: 0;">
+            <path fill="#E1E4EA" opacity=".65" d="M23,41.1L23,41.1c-9.9,0-18-8-18-18l0,0c0-9.9,8-18,18-18h11.3c3.7,0,6.6,3,6.6,6.6v11.4C41,33,32.9,41.1,23,41.1z"/>
+            <path class="fill-white" opacity=".5" d="M28,36L28,36c-9.9,0-18-8-18-18l0,0c0-9.9,8-18,18-18h11.3C43,0.1,46,3.1,46,6.7v11.4C46,28,38,36,28,36z"/>
+            <path class="fill-white" opacity=".7" d="M18,46.1L18,46.1c-10,0-18-8-18-18l0,0c0-9.9,8-18,18-18h11.3c3.7,0,6.6,3,6.6,6.6v11.4C35.9,38.1,27.9,46.1,18,46.1z"/>
+            <path class="fill-primary" d="M17.4,34.1V18.4h10.2v2.9h-6.4v3.4H26v2.9h-4.8v6.5H17.4z"/>
+          </svg>
+          <span class="u-header__navbar-brand-text">Front</span>
+        </a>
+        <a class="small ml-3" href="../getting-started/changelog.html">
+          <span class="badge badge-white">v2.9</span>
+        </a>
+      </div>
+
+      <!-- Header Search -->
+      <form class="form-inline input-group input-group-sm input-group-borderless d-none d-md-flex mr-auto ml-md-4" style="max-width: 500px;">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="docsSearch">
+            <span class="fas fa-search"></span>
+          </span>
+        </div>
+        <input class="js-hs-docs-search form-control pl-0" type="text" placeholder="Search..." aria-label="Search..." aria-describedby="docsSearch" data-url="../assets/ajax/autocomplete-data-for-documentation-search.json">
+      </form>
+      <!-- End Header Search -->
+
+      <!-- Header Links -->
+      <ul class="navbar-nav u-header--starter text-nowrap flex-row align-items-center px-3 ml-0 ml-sm-3">
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="#" title="Video Tuts" target="_blank">
+            <span class="fab fa-youtube mr-sm-1"></span>
+            <span class="d-none d-lg-inline-block">Video Tuts</span>
+          </a>
+        </li> -->
+        <li class="nav-item ml-4">
+          <a class="nav-link" href="../../starter/index.html" title="Start Building">
+            <span class="fas fa-th mr-sm-1"></span>
+            <span class="d-none d-lg-inline-block">Start Building</span>
+          </a>
+        </li>
+        <li class="nav-item ml-3 ml-sm-5">
+          <a class="btn btn-sm btn-light text-primary" href="../../html/home/index.html" title="Live Preview">
+            <span class="far fa-eye mr-sm-1"></span>
+            Live Preview
+          </a>
+        </li>
+      </ul>
+      <!-- End Header Links -->
+    </nav>
+  </header>
+  <!-- ========== END HEADER ========== -->
+
+  <!-- ========== MAIN CONTENT ========== -->
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Sidebar -->
+      <nav class="col-md-3 col-xl-2 bg-light hs-sidebar navbar-expand-md">
+        <div class="d-flex d-md-none justify-content-between mb-3">
+          <!-- Sidebar Search -->
+          <form class="col form-inline input-group-sm">
+            <input class="js-hs-docs-search form-control form-control-sm w-100" type="text" placeholder="Search..." data-url="../assets/ajax/autocomplete-data-for-documentation-search.json">
+          </form>
+          <!-- End Sidebar Search -->
+
+          <!-- Responsive Toggle Button -->
+          <button class="btn btn-link pl-0" type="button" data-toggle="collapse" data-target="#sidebar-nav" aria-controls="sidebar-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30" focusable="false">
+              <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/>
+            </svg>
+          </button>
+          <!-- End Responsive Toggle Button -->
+        </div>
+
+        <!-- Sidebar Nav -->
+        <div class="collapse navbar-collapse" id="sidebar-nav">
+          <div id="sidebarNav" class="js-scrollbar hs-sidebar-sticky">
+            <h5 class="hs-sidebar__heading">Getting started</h5>
+            <ul class="hs-sidebar__nav">
+              <li class="hs-sidebar__item"><a class="hs-sidebar__link" href="../index.html">Introduction</a></li>
+              <li class="hs-sidebar__item"><a class="hs-sidebar__link" href="../getting-started/file-structures.html">File structures</a></li>
+              <li class="hs-sidebar__item"><a class="hs-sidebar__link" href="../getting-started/gulp.html">Gulp</a></li>
+              <li class="hs-sidebar__item"><a class="hs-sidebar__link" href="../getting-started/customization.html">Customization</a></li>
+              <li class="hs-sidebar__item"><a class="hs-sidebar__link" href="../getting-started/credits.html">Credits</a></li>
+              <li class="hs-sidebar__item"><a class="hs-sidebar__link" href="../getting-started/changelog.html">Changelog</a></li>
+            </ul>
+
+            <h5 class="hs-sidebar__heading">Content</h5>
+            <ul class="hs-sidebar__nav">
+              <li class="hs-sidebar__item"><a class="hs-sidebar__link" href="typography.html">Typography</a></li>
+              <li class="hs-sidebar__item">
+                <span class="hs-sidebar__link">Icons:</span>
+                <ul class="hs-sidebar__nav ml-2">
+                  <li class="hs-sidebar__item"><a class="hs-sidebar__link active" href="exclusive-svg.html">Exclusive SVG set</a></li>
+                  <li class="hs-sidebar__item"><a class="hs-sidebar__link" href="font-awesome.html">Font Awesome</a></li>
+                </ul>
+              </li>
+            </ul>
+
+            <h5 class="hs-sidebar__heading">Components</h5>
+            <ul class="hs-sidebar__nav">
+              <li class="hs-sidebar__item"><a class="hs-sidebar__link" href="../components/alerts.html">Alerts</a></li>
+              <li class="hs-sidebar__item"><a class="hs-sidebar__link" href="../components/avatars.html">Avatars</a></li>
+              <li class="hs-sidebar__item"><a class="hs-sidebar__link" href="../components/badge.html">Badge</a></li>
+              <li class="hs-sidebar__item"><a class="hs-sidebar__link" href="../components/breadcrumb.html">Breadcrumb</a></li>
+              <li class="hs-sidebar__item"><a class="hs-sidebar__link" href="../components/buttons.html">Buttons</a></li>
+              <li class="hs-sidebar__item"><a class="hs-sidebar__link" href="../components/cards.html">Cards</a></li>
+              <li class="hs-sidebar__item"><a class="hs-sidebar__link" href="../components/collapse.html">Collapse</a></li>
+              <li class="hs-sidebar__item">
+                <span class="hs-sidebar__link">Dividers:</span>
+                <ul class="hs-sidebar__nav ml-2 mb-0">
+                  <li class="hs-sidebar__item"><a class="hs-sidebar__link" href="../components/css-divider.html">CSS divider</a></li>
+                  <li class="hs-sidebar__item"><a class="hs-sidebar__link" href="../components/svg-divider.html">SVG divider</a></li>
+                </ul>
+              </li>
+              <li class="hs-sidebar__item"><a class="hs-sidebar__link" href="../components/forms.html">Forms</a></li>
+              <li class="hs-sidebar__item"><a class="hs-sidebar__link" href="../components/list-group.html">List group</a></li>
+              <li class="hs-sidebar__item"><a class="hs-sidebar__link" href="../components/navs.html">Navs</a></li>
+              <li class="hs-sidebar__item"><a class="hs-sidebar__link" href="../components/pagination.html">Pagination</a></li>
+              <li class="hs-sidebar__item"><a class="hs-sidebar__link" href="../components/progress.html">Progress</a></li>
+              <li class="hs-sidebar__item"><a class="hs-sidebar__link" href="../components/spinners.html">Spinners</a></li>
+              <li class="hs-sidebar__item"><a class="hs-sidebar__link" href="../components/sticky-footer.html">Sticky footer</a></li>
+              <li class="hs-sidebar__item"><a class="hs-sidebar__link" href="../components/tables.html">Tables</a></li>
+            </ul>
+
+            <h5 class="hs-sidebar__heading">Utilities</h5>
+            <ul class="hs-sidebar__nav">
+              <li class="hs-sidebar__item"><a class="hs-sidebar__link" href="../utilities/borders.html">Borders</a></li>
+              <li class="hs-sidebar__item"><a class="hs-sidebar__link" href="../utilities/colors.html">Colors</a></li>
+              <li class="hs-sidebar__item"><a class="hs-sidebar__link" href="../utilities/content-alignments.html">Content alignments (with position)</a></li>
+              <li class="hs-sidebar__item"><a class="hs-sidebar__link" href="../utilities/links.html">Links</a></li>
+              <li class="hs-sidebar__item"><a class="hs-sidebar__link" href="../utilities/position.html">Position</a></li>
+              <li class="hs-sidebar__item"><a class="hs-sidebar__link" href="../utilities/shadows.html">Shadows</a></li>
+              <li class="hs-sidebar__item"><a class="hs-sidebar__link" href="../utilities/sizing.html">Sizing</a></li>
+              <li class="hs-sidebar__item"><a class="hs-sidebar__link" href="../utilities/spacing.html">Spacing</a></li>
+              <li class="hs-sidebar__item"><a class="hs-sidebar__link" href="../utilities/transform.html">Transform</a></li>
+              <li class="hs-sidebar__item"><a class="hs-sidebar__link" href="../utilities/transitions.html">Transitions</a></li>
+              <li class="hs-sidebar__item"><a class="hs-sidebar__link" href="../utilities/others.html">Others</a></li>
+            </ul>
+
+            <h5 class="hs-sidebar__heading">HS Libraries</h5>
+            <ul class="hs-sidebar__nav">
+              <li class="hs-sidebar__item"><a class="hs-sidebar__link" href="../hs-libraries/background-video.html">Background video</a></li>
+              <li class="hs-sidebar__item"><a class="hs-sidebar__link" href="../hs-libraries/unfold.html">Unfold (Dropdown and others)</a></li>
+              <li class="hs-sidebar__item"><a class="hs-sidebar__link" href="../hs-libraries/file-attach.html">File attach</a></li>
+              <li class="hs-sidebar__item"><a class="hs-sidebar__link" href="../hs-libraries/go-to.html">Go-to</a></li>
+              <li class="hs-sidebar__item"><a class="hs-sidebar__link" href="../hs-libraries/headers.html">Headers</a></li>
+              <li class="hs-sidebar__item"><a class="hs-sidebar__link" href="../hs-libraries/header-mega-menu.html">Header mega menu</a></li>
+              <li class="hs-sidebar__item"><a class="hs-sidebar__link" href="../hs-libraries/header-fullscreen.html">Header fullscreen</a></li>
+              <li class="hs-sidebar__item"><a class="hs-sidebar__link" href="../hs-libraries/header-searches.html">Header searches</a></li>
+              <li class="hs-sidebar__item"><a class="hs-sidebar__link" href="../hs-libraries/page-preloader.html">Page preloader</a></li>
+              <li class="hs-sidebar__item"><a class="hs-sidebar__link" href="../hs-libraries/scroll-effect.html">Scroll effect</a></li>
+              <li class="hs-sidebar__item"><a class="hs-sidebar__link" href="../hs-libraries/scroll-nav.html">Scroll nav</a></li>
+              <li class="hs-sidebar__item"><a class="hs-sidebar__link" href="../hs-libraries/show-animation.html">Show animation</a></li>
+              <li class="hs-sidebar__item"><a class="hs-sidebar__link" href="../hs-libraries/step-form.html">Step form (Wizards)</a></li>
+              <li class="hs-sidebar__item"><a class="hs-sidebar__link" href="../hs-libraries/sticky-block.html">Sticky block</a></li>
+              <li class="hs-sidebar__item"><a class="hs-sidebar__link" href="../hs-libraries/toggle-state.html">Toggle state</a></li>
+            </ul>
+
+            <h5 class="hs-sidebar__heading">Other Libraries</h5>
+            <ul class="hs-sidebar__nav">
+              <li class="hs-sidebar__item"><a class="hs-sidebar__link" href="../libraries/animations.html">Animations</a></li>
+              <li class="hs-sidebar__item"><a class="hs-sidebar__link" href="../libraries/bootstrap-select.html">Bootstrap select</a></li>
+              <li class="hs-sidebar__item"><a class="hs-sidebar__link" href="../libraries/bootstrap-tagsinput.html">Bootstrap tagsinput</a></li>
+              <li class="hs-sidebar__item">
+                <span class="hs-sidebar__link">Charts:</span>
+                <ul class="hs-sidebar__nav ml-2 mb-0">
+                  <li class="hs-sidebar__item"><a class="hs-sidebar__link" href="../libraries/area-chart.html">Area chart</a></li>
+                  <li class="hs-sidebar__item"><a class="hs-sidebar__link" href="../libraries/bar-chart.html">Bar chart</a></li>
+                </ul>
+              </li>
+              <li class="hs-sidebar__item"><a class="hs-sidebar__link" href="../libraries/circles.html">Circles (Pie chart)</a></li>
+              <li class="hs-sidebar__item"><a class="hs-sidebar__link" href="../libraries/clipboard.html">Clipboard</a></li>
+              <li class="hs-sidebar__item"><a class="hs-sidebar__link" href="../libraries/countdown.html">Countdown</a></li>
+              <li class="hs-sidebar__item"><a class="hs-sidebar__link" href="../libraries/counters.html">Counters</a></li>
+              <li class="hs-sidebar__item"><a class="hs-sidebar__link" href="../libraries/cubeportfolio.html">Cubeportfolio</a></li>
+              <li class="hs-sidebar__item"><a class="hs-sidebar__link" href="../libraries/datatables.html">Datatables</a></li>
+              <li class="hs-sidebar__item"><a class="hs-sidebar__link" href="../libraries/dropzone.html">Dropzone (Drag n' drop file uploader)</a></li>
+              <li class="hs-sidebar__item"><a class="hs-sidebar__link" href="../libraries/fancybox.html">Fancybox</a></li>
+              <li class="hs-sidebar__item"><a class="hs-sidebar__link" href="../libraries/flatpickr.html">Flatpickr</a></li>
+              <li class="hs-sidebar__item"><a class="hs-sidebar__link" href="../libraries/google-map.html">Google Map</a></li>
+              <li class="hs-sidebar__item"><a class="hs-sidebar__link" href="../libraries/malihu-scrollbar.html">Malihu scrollbar</a></li>
+              <li class="hs-sidebar__item"><a class="hs-sidebar__link" href="../libraries/modal-window.html">Modal window</a></li>
+              <li class="hs-sidebar__item"><a class="hs-sidebar__link" href="../libraries/parallax.html">Parallax</a></li>
+              <li class="hs-sidebar__item"><a class="hs-sidebar__link" href="../libraries/password-strength.html">Password strength</a></li>
+              <li class="hs-sidebar__item"><a class="hs-sidebar__link" href="../libraries/range-slider.html">Range slider</a></li>
+              <li class="hs-sidebar__item"><a class="hs-sidebar__link" href="../libraries/slick-carousel.html">Slick carousel</a></li>
+              <li class="hs-sidebar__item">
+                <span class="hs-sidebar__link">Social APIs:</span>
+                <ul class="hs-sidebar__nav ml-2 mb-0">
+                  <li class="hs-sidebar__item"><a class="hs-sidebar__link" href="../libraries/social-api-instagram.html">Instagram</a></li>
+                  <li class="hs-sidebar__item"><a class="hs-sidebar__link" href="../libraries/social-api-facebook.html">Facebook</a></li>
+                  <li class="hs-sidebar__item"><a class="hs-sidebar__link" href="../libraries/social-api-twitter.html">Twitter</a></li>
+                </ul>
+              </li>
+              <li class="hs-sidebar__item"><a class="hs-sidebar__link" href="../libraries/summernote.html">Summernote WYSIWYG</a></li>
+              <li class="hs-sidebar__item"><a class="hs-sidebar__link" href="../libraries/svg.html">SVG</a></li>
+              <li class="hs-sidebar__item"><a class="hs-sidebar__link" href="../libraries/typedjs.html">Typed.js</a></li>
+              <li class="hs-sidebar__item"><a class="hs-sidebar__link" href="../libraries/validation.html">Validation</a></li>
+              <li class="hs-sidebar__item"><a class="hs-sidebar__link" href="../libraries/video-player.html">Video player</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- End Sidebar Nav -->
+      </nav>
+      <!-- End Sidebar -->
+
+      <main class="col-md-9 col-xl-10 px-4 pt-0 pt-md-11 pb-7 ml-md-auto">
+        <div class="row">
+          <!-- Section Nav -->
+          <div class="col-xl-2 order-xl-2 d-none d-xl-inline-block">
+            <ul class="js-scroll-nav hd-doc-section-nav">
+              <li class="hd-doc-section-nav-item active"><a href="#overview">Overview</a></li>
+              <li class="hd-doc-section-nav-item"><a href="#how-to-use">How to use</a></li>
+              <li class="hd-doc-section-nav-item"><a href="#default-examples">Default examples</a></li>
+              <li class="hd-doc-section-nav-item"><a href="#white-style-examples">White style examples</a></li>
+            </ul>
+          </div>
+          <!-- End Section Nav -->
+
+          <div class="col-xl-10 order-xl-1">
+            <div class="hs-docs-content-divider">
+              <h1>Exclusive SVG Set</h1>
+              <p class="lead">Guidance and suggestions for using our exclusive SVG set of icon libraries.</p>
+            </div>
+
+            <div id="overview" class="hs-docs-content-divider">
+              <h2 class="hs-docs-heading h4">Overview <a class="anchorjs-link" href="#overview" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+
+              <p>Front icons are designed exclusively designed on top of premium icon set to make Front pages unique, which means that these icons are only available in the Front Template. This set of icons include more than 60 customized icons and counting.</p>
+
+              <p>Icons can be found in <code class="highlighter-rouge">assets/svg/icons/</code></p>
+            </div>
+
+            <div id="how-to-use" class="hs-docs-content-divider">
+              <h2 class="hs-docs-heading h4">How to use? <a class="anchorjs-link" href="#how-to-use" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+
+              <p>Copy-paste the following <code class="highlighter-rouge">&lt;script&gt;</code>s near the end of your pages under <em><u>JS Implementing Plugins</u></em> to enable them.</p>
+
+              <pre>
+                <code class="language-html" data-lang="html">
+                  &lt;script src="../../assets/vendor/svg-injector/dist/svg-injector.min.js"&gt;&lt;/script&gt;
+                </code>
+              </pre>
+
+              <p>Copy-paste the following <code class="highlighter-rouge">&lt;script&gt;</code> near the end of your pages under <em><u>JS Front</u></em> to enable it.</p>
+
+              <pre>
+                <code class="language-html" data-lang="html">
+                  &lt;script src="../../assets/js/components/hs.svg-injector.js"&gt;&lt;/script&gt;
+                </code>
+              </pre>
+
+              <p>Copy-paste the init function under <em><u>JS Plugins Init.</u></em>, before the closing <code class="highlighter-rouge">&lt;/body&gt;</code> tag, to enable it.</p>
+
+              <pre>
+                <code class="language-html" data-lang="html">
+                  &lt;script&gt;
+                    $(document).on('ready', function () {
+                      // initialization of svg injector module
+                      $.HSCore.components.HSSVGIngector.init('.js-svg-injector');
+                    });
+                  &lt;/script&gt;
+                </code>
+              </pre>
+
+              <hr class="my-7">
+
+              <p>There are two ways to use SVG icons in Front:</p>
+
+              <h3 class="hs-docs-heading h5">1. Traditional way <a class="anchorjs-link" href="#sizes-font-awesome" aria-label="Anchor" data-anchorjs-icon="#"></a></h3>
+
+              <p class="mb-0"><em>Pros</em> - Fast loading</p>
+              <p class="mb-0"><em>Cons</em> - Colors must be modified with Illustrator tools</p>
+
+              <pre>
+                <code class="language-html" data-lang="html">
+                  &lt;img src="../../assets/svg/icons/icon-1.svg" alt="SVG"&gt;
+                </code>
+              </pre>
+
+              <h3 class="hs-docs-heading h5">2. Through Embedded JavaScript <a class="anchorjs-link" href="#sizes-font-awesome" aria-label="Anchor" data-anchorjs-icon="#"></a></h3>
+
+              <p class="mb-0"><em>Pros</em> - Colors can be controlled via variables</p>
+              <p class="mb-0"><em>Cons</em> - Uses JavaScript</p>
+
+              <pre>
+                <code class="language-html" data-lang="html">
+                  &lt;figure id="embedIcon" class="svg-preloader"&gt;
+                    &lt;img class="js-svg-injector" src="../../assets/svg/icons/icon-1.svg" alt="SVG" data-parent="#embedIcon"&gt;
+                  &lt;/figure&gt;
+                </code>
+              </pre>
+
+              <p>Front follows the second method as it gives more flexibility when modifying the colors.</p>
+            </div>
+
+            <div id="default-examples" class="hs-docs-content-divider">
+              <h2 class="hs-docs-heading h4 mb-4">Default examples <a class="anchorjs-link" href="#default-examples" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+
+              <div class="row">
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIcon1" class="card text-center hd-doc-copy-to-clipboard">
+                    <div class="card card-body border-0 d-block">
+                      <div id="icon1" class="svg-preloader"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-1.svg" alt="SVG" data-parent="#icon1">
+    </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#icon1"
+                       data-class-change-target="#linkIcon1"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIcon2" class="card text-center hd-doc-copy-to-clipboard">
+                    <div class="card card-body border-0 d-block">
+                      <div id="icon2" class="svg-preloader"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-2.svg" alt="SVG" data-parent="#icon2">
+    </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#icon2"
+                       data-class-change-target="#linkIcon2"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIcon3" class="card text-center hd-doc-copy-to-clipboard">
+                    <div class="card card-body border-0 d-block">
+                      <div id="icon3" class="svg-preloader"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-3.svg" alt="SVG" data-parent="#icon3">
+    </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#icon3"
+                       data-class-change-target="#linkIcon3"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIcon4" class="card text-center hd-doc-copy-to-clipboard">
+                    <div class="card card-body border-0 d-block">
+                      <div id="icon4" class="svg-preloader"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-4.svg" alt="SVG" data-parent="#icon4">
+    </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#icon4"
+                       data-class-change-target="#linkIcon4"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIcon5" class="card text-center hd-doc-copy-to-clipboard">
+                    <div class="card card-body border-0 d-block">
+                      <div id="icon5" class="svg-preloader"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-5.svg" alt="SVG" data-parent="#icon5">
+    </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#icon5"
+                       data-class-change-target="#linkIcon5"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIcon6" class="card text-center hd-doc-copy-to-clipboard">
+                    <div class="card card-body border-0 d-block">
+                      <div id="icon6" class="svg-preloader"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-6.svg" alt="SVG" data-parent="#icon6">
+    </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#icon6"
+                       data-class-change-target="#linkIcon6"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIcon7" class="card text-center hd-doc-copy-to-clipboard">
+                    <div class="card card-body border-0 d-block">
+                      <div id="icon7" class="svg-preloader"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-7.svg" alt="SVG" data-parent="#icon7">
+    </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#icon7"
+                       data-class-change-target="#linkIcon7"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIcon8" class="card text-center hd-doc-copy-to-clipboard">
+                    <div class="card card-body border-0 d-block">
+                      <div id="icon8" class="svg-preloader"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-8.svg" alt="SVG" data-parent="#icon8">
+    </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#icon8"
+                       data-class-change-target="#linkIcon8"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIcon9" class="card text-center hd-doc-copy-to-clipboard">
+                    <div class="card card-body border-0 d-block">
+                      <div id="icon9" class="svg-preloader"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-9.svg" alt="SVG" data-parent="#icon9">
+    </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#icon9"
+                       data-class-change-target="#linkIcon9"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIcon10" class="card text-center hd-doc-copy-to-clipboard">
+                    <div class="card card-body border-0 d-block">
+                      <div id="icon10" class="svg-preloader"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-10.svg" alt="SVG" data-parent="#icon10">
+    </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#icon10"
+                       data-class-change-target="#linkIcon10"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIcon11" class="card text-center hd-doc-copy-to-clipboard">
+                    <div class="card card-body border-0 d-block">
+                      <div id="icon11" class="svg-preloader"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-11.svg" alt="SVG" data-parent="#icon11">
+    </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#icon11"
+                       data-class-change-target="#linkIcon11"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIcon12" class="card text-center hd-doc-copy-to-clipboard">
+                    <div class="card card-body border-0 d-block">
+                      <div id="icon12" class="svg-preloader"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-12.svg" alt="SVG" data-parent="#icon12">
+    </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#icon12"
+                       data-class-change-target="#linkIcon12"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIcon13" class="card text-center hd-doc-copy-to-clipboard">
+                    <div class="card card-body border-0 d-block">
+                      <div id="icon13" class="svg-preloader"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-13.svg" alt="SVG" data-parent="#icon13">
+    </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#icon13"
+                       data-class-change-target="#linkIcon13"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIcon14" class="card text-center hd-doc-copy-to-clipboard">
+                    <div class="card card-body border-0 d-block">
+                      <div id="icon14" class="svg-preloader"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-14.svg" alt="SVG" data-parent="#icon14">
+    </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#icon14"
+                       data-class-change-target="#linkIcon14"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIcon15" class="card text-center hd-doc-copy-to-clipboard">
+                    <div class="card card-body border-0 d-block">
+                      <div id="icon15" class="svg-preloader"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-15.svg" alt="SVG" data-parent="#icon15">
+    </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#icon15"
+                       data-class-change-target="#linkIcon15"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIcon16" class="card text-center hd-doc-copy-to-clipboard">
+                    <div class="card card-body border-0 d-block">
+                      <div id="icon16" class="svg-preloader"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-16.svg" alt="SVG" data-parent="#icon16">
+    </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#icon16"
+                       data-class-change-target="#linkIcon16"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIcon17" class="card text-center hd-doc-copy-to-clipboard">
+                    <div class="card card-body border-0 d-block">
+                      <div id="icon17" class="svg-preloader"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-17.svg" alt="SVG" data-parent="#icon17">
+    </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#icon17"
+                       data-class-change-target="#linkIcon17"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIcon18" class="card text-center hd-doc-copy-to-clipboard">
+                    <div class="card card-body border-0 d-block">
+                      <div id="icon18" class="svg-preloader"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-18.svg" alt="SVG" data-parent="#icon18">
+    </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#icon18"
+                       data-class-change-target="#linkIcon18"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIcon19" class="card text-center hd-doc-copy-to-clipboard">
+                    <div class="card card-body border-0 d-block">
+                      <div id="icon19" class="svg-preloader"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-19.svg" alt="SVG" data-parent="#icon19">
+    </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#icon19"
+                       data-class-change-target="#linkIcon19"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIcon20" class="card text-center hd-doc-copy-to-clipboard">
+                    <div class="card card-body border-0 d-block">
+                      <div id="icon20" class="svg-preloader"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-20.svg" alt="SVG" data-parent="#icon20">
+    </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#icon20"
+                       data-class-change-target="#linkIcon20"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIcon21" class="card text-center hd-doc-copy-to-clipboard">
+                    <div class="card card-body border-0 d-block">
+                      <div id="icon21" class="svg-preloader"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-21.svg" alt="SVG" data-parent="#icon21">
+    </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#icon21"
+                       data-class-change-target="#linkIcon21"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIcon22" class="card text-center hd-doc-copy-to-clipboard">
+                    <div class="card card-body border-0 d-block">
+                      <div id="icon22" class="svg-preloader"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-22.svg" alt="SVG" data-parent="#icon22">
+    </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#icon22"
+                       data-class-change-target="#linkIcon22"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIcon23" class="card text-center hd-doc-copy-to-clipboard">
+                    <div class="card card-body border-0 d-block">
+                      <div id="icon23" class="svg-preloader"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-23.svg" alt="SVG" data-parent="#icon23">
+    </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#icon23"
+                       data-class-change-target="#linkIcon23"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIcon24" class="card text-center hd-doc-copy-to-clipboard">
+                    <div class="card card-body border-0 d-block">
+                      <div id="icon24" class="svg-preloader"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-24.svg" alt="SVG" data-parent="#icon24">
+    </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#icon24"
+                       data-class-change-target="#linkIcon24"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIcon25" class="card text-center hd-doc-copy-to-clipboard">
+                    <div class="card card-body border-0 d-block">
+                      <div id="icon25" class="svg-preloader"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-25.svg" alt="SVG" data-parent="#icon25">
+    </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#icon25"
+                       data-class-change-target="#linkIcon25"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIcon26" class="card text-center hd-doc-copy-to-clipboard">
+                    <div class="card card-body border-0 d-block">
+                      <div id="icon26" class="svg-preloader"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-26.svg" alt="SVG" data-parent="#icon26">
+    </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#icon26"
+                       data-class-change-target="#linkIcon26"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIcon27" class="card text-center hd-doc-copy-to-clipboard">
+                    <div class="card card-body border-0 d-block">
+                      <div id="icon27" class="svg-preloader"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-27.svg" alt="SVG" data-parent="#icon27">
+    </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#icon27"
+                       data-class-change-target="#linkIcon27"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIcon28" class="card text-center hd-doc-copy-to-clipboard">
+                    <div class="card card-body border-0 d-block">
+                      <div id="icon28" class="svg-preloader"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-28.svg" alt="SVG" data-parent="#icon28">
+    </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#icon28"
+                       data-class-change-target="#linkIcon28"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIcon29" class="card text-center hd-doc-copy-to-clipboard">
+                    <div class="card card-body border-0 d-block">
+                      <div id="icon29" class="svg-preloader"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-29.svg" alt="SVG" data-parent="#icon29">
+    </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#icon29"
+                       data-class-change-target="#linkIcon29"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIcon30" class="card text-center hd-doc-copy-to-clipboard">
+                    <div class="card card-body border-0 d-block">
+                      <div id="icon30" class="svg-preloader"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-30.svg" alt="SVG" data-parent="#icon30">
+    </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#icon30"
+                       data-class-change-target="#linkIcon30"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIcon31" class="card text-center hd-doc-copy-to-clipboard">
+                    <div class="card card-body border-0 d-block">
+                      <div id="icon31" class="svg-preloader"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-31.svg" alt="SVG" data-parent="#icon31">
+    </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#icon31"
+                       data-class-change-target="#linkIcon31"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIcon32" class="card text-center hd-doc-copy-to-clipboard">
+                    <div class="card card-body border-0 d-block">
+                      <div id="icon32" class="svg-preloader"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-32.svg" alt="SVG" data-parent="#icon32">
+      </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#icon32"
+                       data-class-change-target="#linkIcon32"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIcon33" class="card text-center hd-doc-copy-to-clipboard">
+                    <div class="card card-body border-0 d-block">
+                      <div id="icon33" class="svg-preloader"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-33.svg" alt="SVG" data-parent="#icon33">
+      </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#icon33"
+                       data-class-change-target="#linkIcon33"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIcon34" class="card text-center hd-doc-copy-to-clipboard">
+                    <div class="card card-body border-0 d-block">
+                      <div id="icon34" class="svg-preloader"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-34.svg" alt="SVG" data-parent="#icon34">
+      </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#icon34"
+                       data-class-change-target="#linkIcon34"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIcon35" class="card text-center hd-doc-copy-to-clipboard">
+                    <div class="card card-body border-0 d-block">
+                      <div id="icon35" class="svg-preloader"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-35.svg" alt="SVG" data-parent="#icon35">
+      </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#icon35"
+                       data-class-change-target="#linkIcon35"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIcon36" class="card text-center hd-doc-copy-to-clipboard">
+                    <div class="card card-body border-0 d-block">
+                      <div id="icon36" class="svg-preloader"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-36.svg" alt="SVG" data-parent="#icon36">
+      </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#icon36"
+                       data-class-change-target="#linkIcon36"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIcon37" class="card text-center hd-doc-copy-to-clipboard">
+                    <div class="card card-body border-0 d-block">
+                      <div id="icon37" class="svg-preloader"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-37.svg" alt="SVG" data-parent="#icon37">
+      </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#icon37"
+                       data-class-change-target="#linkIcon37"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIcon38" class="card text-center hd-doc-copy-to-clipboard">
+                    <div class="card card-body border-0 d-block">
+                      <div id="icon38" class="svg-preloader"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-38.svg" alt="SVG" data-parent="#icon38">
+      </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#icon38"
+                       data-class-change-target="#linkIcon38"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIcon39" class="card text-center hd-doc-copy-to-clipboard">
+                    <div class="card card-body border-0 d-block">
+                      <div id="icon39" class="svg-preloader"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-39.svg" alt="SVG" data-parent="#icon39">
+      </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#icon39"
+                       data-class-change-target="#linkIcon39"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIcon40" class="card text-center hd-doc-copy-to-clipboard">
+                    <div class="card card-body border-0 d-block">
+                      <div id="icon40" class="svg-preloader"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-40.svg" alt="SVG" data-parent="#icon40">
+      </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#icon40"
+                       data-class-change-target="#linkIcon40"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIcon41" class="card text-center hd-doc-copy-to-clipboard">
+                    <div class="card card-body border-0 d-block">
+                      <div id="icon41" class="svg-preloader"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-41.svg" alt="SVG" data-parent="#icon41">
+      </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#icon41"
+                       data-class-change-target="#linkIcon41"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIcon42" class="card text-center hd-doc-copy-to-clipboard">
+                    <div class="card card-body border-0 d-block">
+                      <div id="icon42" class="svg-preloader"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-42.svg" alt="SVG" data-parent="#icon42">
+      </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#icon42"
+                       data-class-change-target="#linkIcon42"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIcon43" class="card text-center hd-doc-copy-to-clipboard">
+                    <div class="card card-body border-0 d-block">
+                      <div id="icon43" class="svg-preloader"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-43.svg" alt="SVG" data-parent="#icon43">
+      </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#icon43"
+                       data-class-change-target="#linkIcon43"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIcon44" class="card text-center hd-doc-copy-to-clipboard">
+                    <div class="card card-body border-0 d-block">
+                      <div id="icon44" class="svg-preloader"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-44.svg" alt="SVG" data-parent="#icon44">
+      </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#icon44"
+                       data-class-change-target="#linkIcon44"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIcon45" class="card text-center hd-doc-copy-to-clipboard">
+                    <div class="card card-body border-0 d-block">
+                      <div id="icon45" class="svg-preloader"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-45.svg" alt="SVG" data-parent="#icon45">
+      </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#icon45"
+                       data-class-change-target="#linkIcon45"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIcon46" class="card text-center hd-doc-copy-to-clipboard">
+                    <div class="card card-body border-0 d-block">
+                      <div id="icon46" class="svg-preloader"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-46.svg" alt="SVG" data-parent="#icon46">
+      </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#icon46"
+                       data-class-change-target="#linkIcon46"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIcon47" class="card text-center hd-doc-copy-to-clipboard">
+                    <div class="card card-body border-0 d-block">
+                      <div id="icon47" class="svg-preloader"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-47.svg" alt="SVG" data-parent="#icon47">
+      </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#icon47"
+                       data-class-change-target="#linkIcon47"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIcon48" class="card text-center hd-doc-copy-to-clipboard">
+                    <div class="card card-body border-0 d-block">
+                      <div id="icon48" class="svg-preloader"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-48.svg" alt="SVG" data-parent="#icon48">
+      </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#icon48"
+                       data-class-change-target="#linkIcon48"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIcon49" class="card text-center hd-doc-copy-to-clipboard">
+                    <div class="card card-body border-0 d-block">
+                      <div id="icon49" class="svg-preloader"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-49.svg" alt="SVG" data-parent="#icon49">
+      </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#icon49"
+                       data-class-change-target="#linkIcon49"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIcon50" class="card text-center hd-doc-copy-to-clipboard">
+                    <div class="card card-body border-0 d-block">
+                      <div id="icon50" class="svg-preloader"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-50.svg" alt="SVG" data-parent="#icon50">
+      </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#icon50"
+                       data-class-change-target="#linkIcon50"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIcon51" class="card text-center hd-doc-copy-to-clipboard">
+                    <div class="card card-body border-0 d-block">
+                      <div id="icon51" class="svg-preloader"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-51.svg" alt="SVG" data-parent="#icon51">
+      </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#icon51"
+                       data-class-change-target="#linkIcon51"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIcon52" class="card text-center hd-doc-copy-to-clipboard">
+                    <div class="card card-body border-0 d-block">
+                      <div id="icon52" class="svg-preloader"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-52.svg" alt="SVG" data-parent="#icon52">
+      </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#icon52"
+                       data-class-change-target="#linkIcon52"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIcon53" class="card text-center hd-doc-copy-to-clipboard">
+                    <div class="card card-body border-0 d-block">
+                      <div id="icon53" class="svg-preloader"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-53.svg" alt="SVG" data-parent="#icon53">
+      </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#icon53"
+                       data-class-change-target="#linkIcon53"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIcon54" class="card text-center hd-doc-copy-to-clipboard">
+                    <div class="card card-body border-0 d-block">
+                      <div id="icon54" class="svg-preloader"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-54.svg" alt="SVG" data-parent="#icon54">
+      </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#icon54"
+                       data-class-change-target="#linkIcon54"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIcon55" class="card text-center hd-doc-copy-to-clipboard">
+                    <div class="card card-body border-0 d-block">
+                      <div id="icon55" class="svg-preloader"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-55.svg" alt="SVG" data-parent="#icon55">
+      </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#icon55"
+                       data-class-change-target="#linkIcon55"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIcon56" class="card text-center hd-doc-copy-to-clipboard">
+                    <div class="card card-body border-0 d-block">
+                      <div id="icon56" class="svg-preloader"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-56.svg" alt="SVG" data-parent="#icon56">
+      </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#icon56"
+                       data-class-change-target="#linkIcon56"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIcon57" class="card text-center hd-doc-copy-to-clipboard">
+                    <div class="card card-body border-0 d-block">
+                      <div id="icon57" class="svg-preloader"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-57.svg" alt="SVG" data-parent="#icon57">
+      </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#icon57"
+                       data-class-change-target="#linkIcon57"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIcon58" class="card text-center hd-doc-copy-to-clipboard">
+                    <div class="card card-body border-0 d-block">
+                      <div id="icon58" class="svg-preloader"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-58.svg" alt="SVG" data-parent="#icon58">
+      </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#icon58"
+                       data-class-change-target="#linkIcon58"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIcon59" class="card text-center hd-doc-copy-to-clipboard">
+                    <div class="card card-body border-0 d-block">
+                      <div id="icon59" class="svg-preloader"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-59.svg" alt="SVG" data-parent="#icon59">
+      </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#icon59"
+                       data-class-change-target="#linkIcon59"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIcon60" class="card text-center hd-doc-copy-to-clipboard">
+                    <div class="card card-body border-0 d-block">
+                      <div id="icon60" class="svg-preloader"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-60.svg" alt="SVG" data-parent="#icon60">
+      </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#icon60"
+                       data-class-change-target="#linkIcon60"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIcon61" class="card text-center hd-doc-copy-to-clipboard">
+                    <div class="card card-body border-0 d-block">
+                      <div id="icon61" class="svg-preloader"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-61.svg" alt="SVG" data-parent="#icon61">
+      </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#icon61"
+                       data-class-change-target="#linkIcon61"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIcon62" class="card text-center hd-doc-copy-to-clipboard">
+                    <div class="card card-body border-0 d-block">
+                      <div id="icon62" class="svg-preloader"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-62.svg" alt="SVG" data-parent="#icon62">
+      </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#icon62"
+                       data-class-change-target="#linkIcon62"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIcon63" class="card text-center hd-doc-copy-to-clipboard">
+                    <div class="card card-body border-0 d-block">
+                      <div id="icon63" class="svg-preloader"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-63.svg" alt="SVG" data-parent="#icon63">
+      </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#icon63"
+                       data-class-change-target="#linkIcon63"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIcon64" class="card text-center hd-doc-copy-to-clipboard">
+                    <div class="card card-body border-0 d-block">
+                      <div id="icon64" class="svg-preloader"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-64.svg" alt="SVG" data-parent="#icon64">
+      </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#icon64"
+                       data-class-change-target="#linkIcon64"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIcon65" class="card text-center hd-doc-copy-to-clipboard">
+                    <div class="card card-body border-0 d-block">
+                      <div id="icon65" class="svg-preloader"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-65.svg" alt="SVG" data-parent="#icon65">
+      </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#icon65"
+                       data-class-change-target="#linkIcon65"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIcon66" class="card text-center hd-doc-copy-to-clipboard">
+                    <div class="card card-body border-0 d-block">
+                      <div id="icon66" class="svg-preloader"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-66.svg" alt="SVG" data-parent="#icon66">
+      </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#icon66"
+                       data-class-change-target="#linkIcon66"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div id="white-style-examples" class="hs-docs-content-divider">
+              <h2 class="hs-docs-heading h4 mb-4">White style examples <a class="anchorjs-link" href="#white-style-examples" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+
+              <div class="row">
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIconWhite1" class="card border-0 text-center hd-doc-copy-to-clipboard">
+                    <div class="card-body bg-primary d-block rounded-top p-0">
+                      <div id="iconWhite1" class="svg-preloader p-3"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-white-1.svg" alt="SVG" data-parent="#iconWhite1">
+    </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer border hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#iconWhite1"
+                       data-class-change-target="#linkIconWhite1"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIconWhite2" class="card border-0 text-center hd-doc-copy-to-clipboard">
+                    <div class="card-body bg-primary d-block rounded-top p-0">
+                      <div id="iconWhite2" class="svg-preloader p-3"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-white-2.svg" alt="SVG" data-parent="#iconWhite2">
+    </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer border hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#iconWhite2"
+                       data-class-change-target="#linkIconWhite2"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIconWhite3" class="card border-0 text-center hd-doc-copy-to-clipboard">
+                    <div class="card-body bg-primary d-block rounded-top p-0">
+                      <div id="iconWhite3" class="svg-preloader p-3"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-white-3.svg" alt="SVG" data-parent="#iconWhite3">
+    </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer border hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#iconWhite3"
+                       data-class-change-target="#linkIconWhite3"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIconWhite4" class="card border-0 text-center hd-doc-copy-to-clipboard">
+                    <div class="card-body bg-primary d-block rounded-top p-0">
+                      <div id="iconWhite4" class="svg-preloader p-3"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-white-4.svg" alt="SVG" data-parent="#iconWhite4">
+    </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer border hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#iconWhite4"
+                       data-class-change-target="#linkIconWhite4"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIconWhite5" class="card border-0 text-center hd-doc-copy-to-clipboard">
+                    <div class="card-body bg-primary d-block rounded-top p-0">
+                      <div id="iconWhite5" class="svg-preloader p-3"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-white-5.svg" alt="SVG" data-parent="#iconWhite5">
+    </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer border hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#iconWhite5"
+                       data-class-change-target="#linkIconWhite5"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIconWhite6" class="card border-0 text-center hd-doc-copy-to-clipboard">
+                    <div class="card-body bg-primary d-block rounded-top p-0">
+                      <div id="iconWhite6" class="svg-preloader p-3"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-white-6.svg" alt="SVG" data-parent="#iconWhite6">
+    </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer border hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#iconWhite6"
+                       data-class-change-target="#linkIconWhite6"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIconWhite7" class="card border-0 text-center hd-doc-copy-to-clipboard">
+                    <div class="card-body bg-primary d-block rounded-top p-0">
+                      <div id="iconWhite7" class="svg-preloader p-3"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-white-7.svg" alt="SVG" data-parent="#iconWhite7">
+    </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer border hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#iconWhite7"
+                       data-class-change-target="#linkIconWhite7"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIconWhite8" class="card border-0 text-center hd-doc-copy-to-clipboard">
+                    <div class="card-body bg-primary d-block rounded-top p-0">
+                      <div id="iconWhite8" class="svg-preloader p-3"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-white-8.svg" alt="SVG" data-parent="#iconWhite8">
+    </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer border hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#iconWhite8"
+                       data-class-change-target="#linkIconWhite8"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIconWhite9" class="card border-0 text-center hd-doc-copy-to-clipboard">
+                    <div class="card-body bg-primary d-block rounded-top p-0">
+                      <div id="iconWhite9" class="svg-preloader p-3"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-white-9.svg" alt="SVG" data-parent="#iconWhite9">
+    </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer border hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#iconWhite9"
+                       data-class-change-target="#linkIconWhite9"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIconWhite10" class="card border-0 text-center hd-doc-copy-to-clipboard">
+                    <div class="card-body bg-primary d-block rounded-top p-0">
+                      <div id="iconWhite10" class="svg-preloader p-3"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-white-10.svg" alt="SVG" data-parent="#iconWhite10">
+    </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer border hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#iconWhite10"
+                       data-class-change-target="#linkIconWhite10"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIconWhite11" class="card border-0 text-center hd-doc-copy-to-clipboard">
+                    <div class="card-body bg-primary d-block rounded-top p-0">
+                      <div id="iconWhite11" class="svg-preloader p-3"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-white-11.svg" alt="SVG" data-parent="#iconWhite11">
+    </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer border hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#iconWhite11"
+                       data-class-change-target="#linkIconWhite11"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIconWhite12" class="card border-0 text-center hd-doc-copy-to-clipboard">
+                    <div class="card-body bg-primary d-block rounded-top p-0">
+                      <div id="iconWhite12" class="svg-preloader p-3"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-white-12.svg" alt="SVG" data-parent="#iconWhite12">
+    </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer border hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#iconWhite12"
+                       data-class-change-target="#linkIconWhite12"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIconWhite13" class="card border-0 text-center hd-doc-copy-to-clipboard">
+                    <div class="card-body bg-primary d-block rounded-top p-0">
+                      <div id="iconWhite13" class="svg-preloader p-3"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-white-13.svg" alt="SVG" data-parent="#iconWhite13">
+    </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer border hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#iconWhite13"
+                       data-class-change-target="#linkIconWhite13"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIconWhite14" class="card border-0 text-center hd-doc-copy-to-clipboard">
+                    <div class="card-body bg-primary d-block rounded-top p-0">
+                      <div id="iconWhite14" class="svg-preloader p-3"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-white-14.svg" alt="SVG" data-parent="#iconWhite14">
+    </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer border hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#iconWhite14"
+                       data-class-change-target="#linkIconWhite14"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIconWhite15" class="card border-0 text-center hd-doc-copy-to-clipboard">
+                    <div class="card-body bg-primary d-block rounded-top p-0">
+                      <div id="iconWhite15" class="svg-preloader p-3"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-white-15.svg" alt="SVG" data-parent="#iconWhite15">
+    </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer border hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#iconWhite15"
+                       data-class-change-target="#linkIconWhite15"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIconWhite16" class="card border-0 text-center hd-doc-copy-to-clipboard">
+                    <div class="card-body bg-primary d-block rounded-top p-0">
+                      <div id="iconWhite16" class="svg-preloader p-3"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-white-16.svg" alt="SVG" data-parent="#iconWhite16">
+    </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer border hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#iconWhite16"
+                       data-class-change-target="#linkIconWhite16"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIconWhite17" class="card border-0 text-center hd-doc-copy-to-clipboard">
+                    <div class="card-body bg-primary d-block rounded-top p-0">
+                      <div id="iconWhite17" class="svg-preloader p-3"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-white-17.svg" alt="SVG" data-parent="#iconWhite17">
+    </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer border hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#iconWhite17"
+                       data-class-change-target="#linkIconWhite17"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIconWhite18" class="card border-0 text-center hd-doc-copy-to-clipboard">
+                    <div class="card-body bg-primary d-block rounded-top p-0">
+                      <div id="iconWhite18" class="svg-preloader p-3"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-white-18.svg" alt="SVG" data-parent="#iconWhite18">
+    </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer border hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#iconWhite18"
+                       data-class-change-target="#linkIconWhite18"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIconWhite19" class="card border-0 text-center hd-doc-copy-to-clipboard">
+                    <div class="card-body bg-primary d-block rounded-top p-0">
+                      <div id="iconWhite19" class="svg-preloader p-3"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-white-19.svg" alt="SVG" data-parent="#iconWhite19">
+    </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer border hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#iconWhite19"
+                       data-class-change-target="#linkIconWhite19"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIconWhite20" class="card border-0 text-center hd-doc-copy-to-clipboard">
+                    <div class="card-body bg-primary d-block rounded-top p-0">
+                      <div id="iconWhite20" class="svg-preloader p-3"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-white-20.svg" alt="SVG" data-parent="#iconWhite20">
+    </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer border hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#iconWhite20"
+                       data-class-change-target="#linkIconWhite20"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIconWhite21" class="card border-0 text-center hd-doc-copy-to-clipboard">
+                    <div class="card-body bg-primary d-block rounded-top p-0">
+                      <div id="iconWhite21" class="svg-preloader p-3"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-white-21.svg" alt="SVG" data-parent="#iconWhite21">
+    </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer border hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#iconWhite21"
+                       data-class-change-target="#linkIconWhite21"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIconWhite22" class="card border-0 text-center hd-doc-copy-to-clipboard">
+                    <div class="card-body bg-primary d-block rounded-top p-0">
+                      <div id="iconWhite22" class="svg-preloader p-3"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-white-22.svg" alt="SVG" data-parent="#iconWhite22">
+    </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer border hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#iconWhite22"
+                       data-class-change-target="#linkIconWhite22"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIconWhite23" class="card border-0 text-center hd-doc-copy-to-clipboard">
+                    <div class="card-body bg-primary d-block rounded-top p-0">
+                      <div id="iconWhite23" class="svg-preloader p-3"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-white-23.svg" alt="SVG" data-parent="#iconWhite23">
+    </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer border hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#iconWhite23"
+                       data-class-change-target="#linkIconWhite23"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIconWhite24" class="card border-0 text-center hd-doc-copy-to-clipboard">
+                    <div class="card-body bg-primary d-block rounded-top p-0">
+                      <div id="iconWhite24" class="svg-preloader p-3"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-white-24.svg" alt="SVG" data-parent="#iconWhite24">
+    </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer border hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#iconWhite24"
+                       data-class-change-target="#linkIconWhite24"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIconWhite25" class="card border-0 text-center hd-doc-copy-to-clipboard">
+                    <div class="card-body bg-primary d-block rounded-top p-0">
+                      <div id="iconWhite25" class="svg-preloader p-3"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-white-25.svg" alt="SVG" data-parent="#iconWhite25">
+    </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer border hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#iconWhite25"
+                       data-class-change-target="#linkIconWhite25"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIconWhite26" class="card border-0 text-center hd-doc-copy-to-clipboard">
+                    <div class="card-body bg-primary d-block rounded-top p-0">
+                      <div id="iconWhite26" class="svg-preloader p-3"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-white-26.svg" alt="SVG" data-parent="#iconWhite26">
+    </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer border hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#iconWhite26"
+                       data-class-change-target="#linkIconWhite26"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIconWhite27" class="card border-0 text-center hd-doc-copy-to-clipboard">
+                    <div class="card-body bg-primary d-block rounded-top p-0">
+                      <div id="iconWhite27" class="svg-preloader p-3"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-white-27.svg" alt="SVG" data-parent="#iconWhite27">
+    </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer border hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#iconWhite27"
+                       data-class-change-target="#linkIconWhite27"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIconWhite28" class="card border-0 text-center hd-doc-copy-to-clipboard">
+                    <div class="card-body bg-primary d-block rounded-top p-0">
+                      <div id="iconWhite28" class="svg-preloader p-3"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-white-28.svg" alt="SVG" data-parent="#iconWhite28">
+    </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer border hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#iconWhite28"
+                       data-class-change-target="#linkIconWhite28"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIconWhite29" class="card border-0 text-center hd-doc-copy-to-clipboard">
+                    <div class="card-body bg-primary d-block rounded-top p-0">
+                      <div id="iconWhite29" class="svg-preloader p-3"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-white-29.svg" alt="SVG" data-parent="#iconWhite29">
+    </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer border hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#iconWhite29"
+                       data-class-change-target="#linkIconWhite29"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIconWhite30" class="card border-0 text-center hd-doc-copy-to-clipboard">
+                    <div class="card-body bg-primary d-block rounded-top p-0">
+                      <div id="iconWhite30" class="svg-preloader p-3"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-white-30.svg" alt="SVG" data-parent="#iconWhite30">
+    </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer border hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#iconWhite30"
+                       data-class-change-target="#linkIconWhite30"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIconWhite31" class="card border-0 text-center hd-doc-copy-to-clipboard">
+                    <div class="card-body bg-primary d-block rounded-top p-0">
+                      <div id="iconWhite31" class="svg-preloader p-3"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-white-31.svg" alt="SVG" data-parent="#iconWhite31">
+    </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer border hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#iconWhite31"
+                       data-class-change-target="#linkIconWhite31"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIconWhite32" class="card border-0 text-center hd-doc-copy-to-clipboard">
+                    <div class="card-body bg-primary d-block rounded-top p-0">
+                      <div id="iconWhite32" class="svg-preloader p-3"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-white-32.svg" alt="SVG" data-parent="#iconWhite32">
+      </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer border hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#iconWhite32"
+                       data-class-change-target="#linkIconWhite32"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIconWhite33" class="card border-0 text-center hd-doc-copy-to-clipboard">
+                    <div class="card-body bg-primary d-block rounded-top p-0">
+                      <div id="iconWhite33" class="svg-preloader p-3"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-white-33.svg" alt="SVG" data-parent="#iconWhite33">
+      </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer border hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#iconWhite33"
+                       data-class-change-target="#linkIconWhite33"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIconWhite34" class="card border-0 text-center hd-doc-copy-to-clipboard">
+                    <div class="card-body bg-primary d-block rounded-top p-0">
+                      <div id="iconWhite34" class="svg-preloader p-3"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-white-34.svg" alt="SVG" data-parent="#iconWhite34">
+      </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer border hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#iconWhite34"
+                       data-class-change-target="#linkIconWhite34"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIconWhite35" class="card border-0 text-center hd-doc-copy-to-clipboard">
+                    <div class="card-body bg-primary d-block rounded-top p-0">
+                      <div id="iconWhite35" class="svg-preloader p-3"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-white-35.svg" alt="SVG" data-parent="#iconWhite35">
+      </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer border hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#iconWhite35"
+                       data-class-change-target="#linkIconWhite35"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIconWhite36" class="card border-0 text-center hd-doc-copy-to-clipboard">
+                    <div class="card-body bg-primary d-block rounded-top p-0">
+                      <div id="iconWhite36" class="svg-preloader p-3"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-white-36.svg" alt="SVG" data-parent="#iconWhite36">
+      </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer border hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#iconWhite36"
+                       data-class-change-target="#linkIconWhite36"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIconWhite37" class="card border-0 text-center hd-doc-copy-to-clipboard">
+                    <div class="card-body bg-primary d-block rounded-top p-0">
+                      <div id="iconWhite37" class="svg-preloader p-3"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-white-37.svg" alt="SVG" data-parent="#iconWhite37">
+      </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer border hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#iconWhite37"
+                       data-class-change-target="#linkIconWhite37"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIconWhite38" class="card border-0 text-center hd-doc-copy-to-clipboard">
+                    <div class="card-body bg-primary d-block rounded-top p-0">
+                      <div id="iconWhite38" class="svg-preloader p-3"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-white-38.svg" alt="SVG" data-parent="#iconWhite38">
+      </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer border hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#iconWhite38"
+                       data-class-change-target="#linkIconWhite38"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIconWhite39" class="card border-0 text-center hd-doc-copy-to-clipboard">
+                    <div class="card-body bg-primary d-block rounded-top p-0">
+                      <div id="iconWhite39" class="svg-preloader p-3"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-white-39.svg" alt="SVG" data-parent="#iconWhite39">
+      </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer border hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#iconWhite39"
+                       data-class-change-target="#linkIconWhite39"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIconWhite40" class="card border-0 text-center hd-doc-copy-to-clipboard">
+                    <div class="card-body bg-primary d-block rounded-top p-0">
+                      <div id="iconWhite40" class="svg-preloader p-3"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-white-40.svg" alt="SVG" data-parent="#iconWhite40">
+      </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer border hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#iconWhite40"
+                       data-class-change-target="#linkIconWhite40"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIconWhite41" class="card border-0 text-center hd-doc-copy-to-clipboard">
+                    <div class="card-body bg-primary d-block rounded-top p-0">
+                      <div id="iconWhite41" class="svg-preloader p-3"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-white-41.svg" alt="SVG" data-parent="#iconWhite41">
+      </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer border hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#iconWhite41"
+                       data-class-change-target="#linkIconWhite41"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIconWhite42" class="card border-0 text-center hd-doc-copy-to-clipboard">
+                    <div class="card-body bg-primary d-block rounded-top p-0">
+                      <div id="iconWhite42" class="svg-preloader p-3"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-white-42.svg" alt="SVG" data-parent="#iconWhite42">
+      </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer border hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#iconWhite42"
+                       data-class-change-target="#linkIconWhite42"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIconWhite43" class="card border-0 text-center hd-doc-copy-to-clipboard">
+                    <div class="card-body bg-primary d-block rounded-top p-0">
+                      <div id="iconWhite43" class="svg-preloader p-3"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-white-43.svg" alt="SVG" data-parent="#iconWhite43">
+      </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer border hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#iconWhite43"
+                       data-class-change-target="#linkIconWhite43"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIconWhite44" class="card border-0 text-center hd-doc-copy-to-clipboard">
+                    <div class="card-body bg-primary d-block rounded-top p-0">
+                      <div id="iconWhite44" class="svg-preloader p-3"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-white-44.svg" alt="SVG" data-parent="#iconWhite44">
+      </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer border hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#iconWhite44"
+                       data-class-change-target="#linkIconWhite44"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIconWhite45" class="card border-0 text-center hd-doc-copy-to-clipboard">
+                    <div class="card-body bg-primary d-block rounded-top p-0">
+                      <div id="iconWhite45" class="svg-preloader p-3"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-white-45.svg" alt="SVG" data-parent="#iconWhite45">
+      </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer border hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#iconWhite45"
+                       data-class-change-target="#linkIconWhite45"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIconWhite46" class="card border-0 text-center hd-doc-copy-to-clipboard">
+                    <div class="card-body bg-primary d-block rounded-top p-0">
+                      <div id="iconWhite46" class="svg-preloader p-3"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-white-46.svg" alt="SVG" data-parent="#iconWhite46">
+      </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer border hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#iconWhite46"
+                       data-class-change-target="#linkIconWhite46"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIconWhite47" class="card border-0 text-center hd-doc-copy-to-clipboard">
+                    <div class="card-body bg-primary d-block rounded-top p-0">
+                      <div id="iconWhite47" class="svg-preloader p-3"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-white-47.svg" alt="SVG" data-parent="#iconWhite47">
+      </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer border hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#iconWhite47"
+                       data-class-change-target="#linkIconWhite47"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIconWhite48" class="card border-0 text-center hd-doc-copy-to-clipboard">
+                    <div class="card-body bg-primary d-block rounded-top p-0">
+                      <div id="iconWhite48" class="svg-preloader p-3"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-white-48.svg" alt="SVG" data-parent="#iconWhite48">
+      </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer border hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#iconWhite48"
+                       data-class-change-target="#linkIconWhite48"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIconWhite49" class="card border-0 text-center hd-doc-copy-to-clipboard">
+                    <div class="card-body bg-primary d-block rounded-top p-0">
+                      <div id="iconWhite49" class="svg-preloader p-3"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-white-49.svg" alt="SVG" data-parent="#iconWhite49">
+      </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer border hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#iconWhite49"
+                       data-class-change-target="#linkIconWhite49"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIconWhite50" class="card border-0 text-center hd-doc-copy-to-clipboard">
+                    <div class="card-body bg-primary d-block rounded-top p-0">
+                      <div id="iconWhite50" class="svg-preloader p-3"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-white-50.svg" alt="SVG" data-parent="#iconWhite50">
+      </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer border hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#iconWhite50"
+                       data-class-change-target="#linkIconWhite50"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIconWhite51" class="card border-0 text-center hd-doc-copy-to-clipboard">
+                    <div class="card-body bg-primary d-block rounded-top p-0">
+                      <div id="iconWhite51" class="svg-preloader p-3"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-white-51.svg" alt="SVG" data-parent="#iconWhite51">
+      </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer border hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#iconWhite51"
+                       data-class-change-target="#linkIconWhite51"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIconWhite52" class="card border-0 text-center hd-doc-copy-to-clipboard">
+                    <div class="card-body bg-primary d-block rounded-top p-0">
+                      <div id="iconWhite52" class="svg-preloader p-3"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-white-52.svg" alt="SVG" data-parent="#iconWhite52">
+      </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer border hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#iconWhite52"
+                       data-class-change-target="#linkIconWhite52"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIconWhite53" class="card border-0 text-center hd-doc-copy-to-clipboard">
+                    <div class="card-body bg-primary d-block rounded-top p-0">
+                      <div id="iconWhite53" class="svg-preloader p-3"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-white-53.svg" alt="SVG" data-parent="#iconWhite53">
+      </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer border hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#iconWhite53"
+                       data-class-change-target="#linkIconWhite53"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIconWhite54" class="card border-0 text-center hd-doc-copy-to-clipboard">
+                    <div class="card-body bg-primary d-block rounded-top p-0">
+                      <div id="iconWhite54" class="svg-preloader p-3"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-white-54.svg" alt="SVG" data-parent="#iconWhite54">
+      </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer border hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#iconWhite54"
+                       data-class-change-target="#linkIconWhite54"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIconWhite55" class="card border-0 text-center hd-doc-copy-to-clipboard">
+                    <div class="card-body bg-primary d-block rounded-top p-0">
+                      <div id="iconWhite55" class="svg-preloader p-3"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-white-55.svg" alt="SVG" data-parent="#iconWhite55">
+      </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer border hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#iconWhite55"
+                       data-class-change-target="#linkIconWhite55"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIconWhite56" class="card border-0 text-center hd-doc-copy-to-clipboard">
+                    <div class="card-body bg-primary d-block rounded-top p-0">
+                      <div id="iconWhite56" class="svg-preloader p-3"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-white-56.svg" alt="SVG" data-parent="#iconWhite56">
+      </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer border hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#iconWhite56"
+                       data-class-change-target="#linkIconWhite56"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIconWhite57" class="card border-0 text-center hd-doc-copy-to-clipboard">
+                    <div class="card-body bg-primary d-block rounded-top p-0">
+                      <div id="iconWhite57" class="svg-preloader p-3"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-white-57.svg" alt="SVG" data-parent="#iconWhite57">
+      </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer border hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#iconWhite57"
+                       data-class-change-target="#linkIconWhite57"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIconWhite58" class="card border-0 text-center hd-doc-copy-to-clipboard">
+                    <div class="card-body bg-primary d-block rounded-top p-0">
+                      <div id="iconWhite58" class="svg-preloader p-3"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-white-58.svg" alt="SVG" data-parent="#iconWhite58">
+      </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer border hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#iconWhite58"
+                       data-class-change-target="#linkIconWhite58"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIconWhite59" class="card border-0 text-center hd-doc-copy-to-clipboard">
+                    <div class="card-body bg-primary d-block rounded-top p-0">
+                      <div id="iconWhite59" class="svg-preloader p-3"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-white-59.svg" alt="SVG" data-parent="#iconWhite59">
+      </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer border hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#iconWhite59"
+                       data-class-change-target="#linkIconWhite59"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIconWhite60" class="card border-0 text-center hd-doc-copy-to-clipboard">
+                    <div class="card-body bg-primary d-block rounded-top p-0">
+                      <div id="iconWhite60" class="svg-preloader p-3"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-white-60.svg" alt="SVG" data-parent="#iconWhite60">
+      </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer border hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#iconWhite60"
+                       data-class-change-target="#linkIconWhite60"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIconWhite61" class="card border-0 text-center hd-doc-copy-to-clipboard">
+                    <div class="card-body bg-primary d-block rounded-top p-0">
+                      <div id="iconWhite61" class="svg-preloader p-3"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-white-61.svg" alt="SVG" data-parent="#iconWhite61">
+      </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer border hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#iconWhite61"
+                       data-class-change-target="#linkIconWhite61"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIconWhite62" class="card border-0 text-center hd-doc-copy-to-clipboard">
+                    <div class="card-body bg-primary d-block rounded-top p-0">
+                      <div id="iconWhite62" class="svg-preloader p-3"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-white-62.svg" alt="SVG" data-parent="#iconWhite62">
+      </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer border hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#iconWhite62"
+                       data-class-change-target="#linkIconWhite62"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIconWhite63" class="card border-0 text-center hd-doc-copy-to-clipboard">
+                    <div class="card-body bg-primary d-block rounded-top p-0">
+                      <div id="iconWhite63" class="svg-preloader p-3"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-white-63.svg" alt="SVG" data-parent="#iconWhite63">
+      </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer border hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#iconWhite63"
+                       data-class-change-target="#linkIconWhite63"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIconWhite64" class="card border-0 text-center hd-doc-copy-to-clipboard">
+                    <div class="card-body bg-primary d-block rounded-top p-0">
+                      <div id="iconWhite64" class="svg-preloader p-3"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-white-64.svg" alt="SVG" data-parent="#iconWhite64">
+      </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer border hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#iconWhite64"
+                       data-class-change-target="#linkIconWhite64"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIconWhite65" class="card border-0 text-center hd-doc-copy-to-clipboard">
+                    <div class="card-body bg-primary d-block rounded-top p-0">
+                      <div id="iconWhite65" class="svg-preloader p-3"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-white-65.svg" alt="SVG" data-parent="#iconWhite65">
+      </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer border hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#iconWhite65"
+                       data-class-change-target="#linkIconWhite65"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-2 mb-5">
+                  <div id="linkIconWhite66" class="card border-0 text-center hd-doc-copy-to-clipboard">
+                    <div class="card-body bg-primary d-block rounded-top p-0">
+                      <div id="iconWhite66" class="svg-preloader p-3"><figure class="ie-height-56 max-width-8 mx-auto">
+      <img class="js-svg-injector" src="../../assets/svg/icons/icon-white-66.svg" alt="SVG" data-parent="#iconWhite66">
+      </figure></div>
+                    </div>
+                    <a class="js-clipboard card-footer border hd-doc-copy-to-clipboard-text py-1" href="javascript:;"
+                       data-content-target="#iconWhite66"
+                       data-class-change-target="#linkIconWhite66"
+                       data-success-class="border-primary"
+                       data-success-text="Copied">
+                      Copy
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pager Nav -->
+            <div class="row">
+              <div class="col-sm-6">
+                <a class="card shadow text-right p-4 transition-3d-hover" href="typography.html">
+                  <span class="media align-items-center">
+                    <span class="fas fa-arrow-left mr-2"></span>
+                    <span class="media-body">
+                      <span class="d-block text-secondary">Previous</span>
+                      <span class="d-block font-weight-semi-bold">Typography</span>
+                    </span>
+                  </span>
+                </a>
+              </div>
+              <div class="col-sm-6">
+                <a class="card shadow p-4 transition-3d-hover" href="font-awesome.html">
+                  <span class="media align-items-center">
+                    <span class="media-body">
+                      <span class="d-block text-secondary">Next</span>
+                      <span class="d-block font-weight-semi-bold">Icons - Font Awesome</span>
+                    </span>
+                    <span class="fas fa-arrow-right ml-2"></span>
+                  </span>
+                </a>
+              </div>
+            </div>
+            <!-- End Pager Nav -->
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+  <!-- ========== END MAIN CONTENT ========== -->
+
+  <!-- Contact Us -->
+  <div class="position-fixed bottom-0 right-0 bg-white p-3 m-1">
+    <a class="btn btn-sm btn-outline-primary transition-3d-hover" target="_blank" href="https://htmlstream.com/contact-us">
+      <span class="media align-items-center">
+        <span class="far fa-envelope mr-2"></span>
+        <span class="media-body">
+          Contact Us
+        </span>
+      </span>
+    </a>
+  </div>
+  <!-- End Contact Us -->
+
+  <!-- JS Global Compulsory -->
+  <script src="../../assets/vendor/jquery/dist/jquery.min.js"></script>
+  <script src="../../assets/vendor/jquery-migrate/dist/jquery-migrate.min.js"></script>
+  <script src="../../assets/vendor/popper.js/dist/umd/popper.min.js"></script>
+  <script src="../../assets/vendor/bootstrap/bootstrap.min.js"></script>
+
+  <!-- JS Implementing Plugins -->
+  <script src="../../assets/vendor/hs-megamenu/src/hs.megamenu.js"></script>
+  <script src="../../assets/vendor/svg-injector/dist/svg-injector.min.js"></script>
+  <script src="../../assets/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../../assets/vendor/clipboard/dist/clipboard.min.js"></script>
+  <script src="../../documentation/assets/vendor/jquery-ui/jquery-ui.core.min.js"></script>
+  <script src="../../documentation/assets/vendor/jquery-ui/ui/widgets/menu.js"></script>
+  <script src="../../documentation/assets/vendor/jquery-ui/ui/widgets/mouse.js"></script>
+  <script src="../../documentation/assets/vendor/jquery-ui/ui/widgets/autocomplete.js"></script>
+  <script src="../../documentation/assets/vendor/prism/prism.js"></script>
+
+  <!-- JS Front -->
+  <script src="../../assets/js/hs.core.js"></script>
+  <script src="../../assets/js/components/hs.header.js"></script>
+  <script src="../../assets/js/components/hs.malihu-scrollbar.js"></script>
+  <script src="../../assets/js/components/hs.scroll-nav.js"></script>
+  <script src="../../assets/js/components/hs.clipboard.js"></script>
+  <script src="../../assets/js/components/hs.svg-injector.js"></script>
+  <script src="../../documentation/assets/js/components/hs.autocomplete-local-search.js"></script>
+
+  <!-- JS Plugins Init. -->
+  <script>
+    $(document).on('ready', function () {
+      // initialization of header
+      $.HSCore.components.HSHeader.init($('#header'));
+
+      // initialization of malihu scrollbar
+      var $scrollbar = $('.js-scrollbar');
+      $.HSCore.components.HSMalihuScrollBar.init($scrollbar);
+      $($scrollbar).mCustomScrollbar('scrollTo', '.js-scrollbar .hs-sidebar__link.active');
+
+      // initialization of clipboard
+      $.HSCore.components.HSClipboard.init('.js-clipboard');
+
+      // initialization of svg injector module
+      $.HSCore.components.HSSVGIngector.init('.js-svg-injector');
+    });
+
+    $(window).on('load', function () {
+      // initialization of HSMegaMenu component
+      $('.js-mega-menu').HSMegaMenu({
+        event: 'hover',
+        pageContainer: $('.container'),
+        breakpoint: 991.98,
+        hideTimeOut: 0
+      });
+
+      // initialization of autocomplet
+      $.HSCore.components.HSLocalSearchAutocomplete.init('.js-hs-docs-search');
+
+      // initialization of HSScrollNav component
+      var offsetTop = $('#logoAndNav').outerHeight();
+
+      $.HSCore.components.HSScrollNav.init($('.js-scroll-nav'), {
+        duration: 400,
+        customOffsetTop: 0
+      });
+    });
+  </script>
+</body>
+</html>

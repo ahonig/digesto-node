@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+	  <%- include ('partials/public/_header'); %>
+	  <!-- ========== MAIN CONTENT ========== -->
+	  <main id="content" role="main">
+		
+		<div class="bg-primary">
+			<div class="container space-1">
+				<div class="row">
+					<div class="col-lg-5 mb-4 mb-lg-0">
+					  <!-- Input -->
+					  <label class="d-block">
+						<span class="h4 d-block text-white font-weight-semi-bold mb-0">Qu&eacute;</span>
+					  </label>
+					  <div class="js-focus-state">
+						<div class="input-group">
+						  <input type="text" class="form-control" id="valorBuscado" placeholder="Palabras clave o títulos" aria-label="Palabras clave o títulos" aria-describedby="keywordInputAddon">
+						  <div class="input-group-append">
+							<span class="input-group-text">
+							  <span class="fas fa-search" id="keywordInputAddon"></span>
+							</span>
+						  </div>
+						</div>
+					  </div>
+					  <!-- End Input -->
+					</div>
+
+					<div class="col-lg-5 mb-4 mb-lg-0">
+					  <!-- Input -->
+					  <label class="d-block">
+						<span class="h4 d-block text-white font-weight-semi-bold mb-0">d&oacute;nde</span>
+					  </label>
+					  <div class="js-focus-state">
+						<div class="input-group">
+						  <select class="form-control select2" id="tipoBusqueda">
+							<option value="todo">Todo</option>
+							<option value="titulo">Titulo y por palabra dentro de la Norma</option>
+							<option value="numero">Nro de norma</option>
+							<option value="nombre">Nombre Popular</option>
+							<option value="anho">Por año de Promulagación</option>
+						  </select>
+						</div>
+					  </div>
+					  <!-- End Input -->
+					</div>
+
+					<div class="col-lg-2 align-self-lg-end">
+						<a class="btn btn-sm btn-soft-white transition-3d-hover" id="btnBuscar" href="#">
+							<span class="fas fa-search small mr-2"></span>
+							Buscar
+						  </a>
+					</div>
+				  </div>
+			</div>
+		</div>
+
+		<div class="bg-light">
+	   	     <div class="container space-1">
+		          <div class="row">
+				<div class="hs-docs-content-divider" style="margin-top: 0rem !important; padding-bottom: 0rem !important;">
+			          <h1 class="h3 font-weight-semi-bold"><%= ( typeof leyCategoriaPadre != 'undefined' ? leyCategoriaPadre[0].cate_codigo + " " + leyCategoriaPadre[0].cate_descripcion  : ''  )  %></h1>
+			          <p><%= ( typeof leyCategoria != 'undefined' && leyCategoria.length ? leyCategoria[0].cate_codigo + " " + leyCategoria[0].cate_descripcion  : ''  )  %></p>
+			        </div>
+			  </div>
+			  <div class="row">
+				<div class="col-lg-3 mb-7 mb-lg-0">
+	 
+				  <!-- Categorias  -->
+				  <div class="card mb-4" >
+					<div class="card-header pt-4 pb-3 px-0 mx-4">
+					  <h2 class="h6 mb-0">Categor&iacute;as</h2>
+					</div>
+	  
+					<div class="card-body pt-3 pb-4 px-4">
+					<% 
+					if ( typeof categoriasNivel1 != 'undefined' ) { 
+						for(var i =0; i < categoriasNivel1.length; i++){ %>
+							<a class="d-flex align-items-start mb-4" style="margin-bottom: 0 !important;" href="/digesto/laws/categories/<%= categoriasNivel1[i].cate_codigo %>" target="_self">
+								<div class="ml-3">
+								<span class="d-block text-dark"> <%= categoriasNivel1[i].cate_codigo %>. <%= categoriasNivel1[i].cate_descripcion %>.</span>
+								</div>
+							</a>
+					<% 
+							 }
+					} %>
+
+					</div>
+				  </div>
+				  <!-- End Categorias -->
+				</div>
+
+				<div class="card col-lg-9">
+
+	<div class="mb-0 mt-4" >
+
+		<h2 class="h4">Ley N&uacute;mero: <%= ley.leye_numero %> </span></h2>
+
+	</div>
+
+	<div class="card mb-5">
+	   <div class="card-body p-4">
+		  <!-- Details -->
+		  <div class="media d-block d-sm-flex">
+			 <div class="media-body">
+				<!-- Header -->
+				<div class="media mb-2">
+				   <div class="media-body">
+					  <h1 class="h5 mb-1">
+						 <%- ley.leye_titulo.replace('\\u0022','"') %>
+					  </h1>
+					  <ul class="list-inline font-size-1 text-muted">
+						 <li class="list-inline-item">
+							<strong>Promulacion:</strong> <%= ley.leye_fecha_promulgacion %>
+						 </li>
+						 <li class="list-inline-item">
+							<strong> Sancion:</strong> <%= ley.leye_fecha_sancion %>
+						 </li>
+					  </ul>
+				   </div>
+				</div>
+				<!-- End Header -->
+				<div class="mb-5">
+				   <p><%- ley.leye_contenido.replace('\\u0022','"') %></p>
+				</div>
+
+				<% if ( ley.leye_asociaciones.length > 0) { %>
+
+				<div class="mb-5">
+				   <strong>Asociaciones:</strong>
+                                   <p>
+                                        <%
+                                                for(var a =0; a < ley.leye_asociaciones.length; a++){
+
+                                                        __append('<a href="../results/numero/'+ley.leye_asociaciones[a]+'" target="_blank">'+ley.leye_asociaciones[a]+'</a>&nbsp; &nbsp; ')
+
+                                                }
+                                        %>
+                                   </p>
+				
+                                </div>					
+
+				<% } %>
+
+
+				<% if ( ley.leye_derogaciones.length > 0) { %>
+
+                                <div class="mb-5">
+                                   <strong>Derogaciones:</strong>
+                                   <p>
+					<% 
+						for(var d =0; d < ley.leye_derogaciones.length; d++){	 
+
+							__append('<a href="../results/numero/'+ley.leye_derogaciones[d]+'" target="_blank">'+ley.leye_derogaciones[d]+'</a>&nbsp; &nbsp;')
+
+						}
+					%> 
+				   </p>
+                                </div>
+
+                                <% } %>
+				
+
+				<div class="d-md-flex align-items-md-center">
+				   <% if ( ley.leye_doc != "" && ley.leye_doc != null ) { %>
+				   <!-- WORD -->
+				   <div class="u-ver-divider u-ver-divider--none-md pr-4 mb-3 mb-md-0 mr-4">
+					  <h2 class="small text-secondary mb-0">Archivo word</h2>
+					  <span class="align-middle"><a href="/digesto/files/<%= ley.leye_doc %>" target="_blank"><img class="mr-2" src="/digesto/assets/svg/flat-icons/word-files.svg" alt="Image Description" style="width: 40px;"></a></span>
+				   </div>
+				   <!-- End WORD FIle -->
+				   <% } %>
+				   <% if ( ley.leye_pdf != "" && ley.leye_pdf != null ) { %>
+				   <!-- PDF -->
+				   <div class="u-ver-divider u-ver-divider--none-md pr-4 mb-3 mb-md-0 mr-4">
+					  <h2 class="small text-secondary mb-0">Archivo PDF</h2>
+					  <span class="align-middle"><a href="/digesto/files/<%= ley.leye_pdf %>" target="_blank"><img class="mr-2" src="/digesto/assets/svg/flat-icons/pdf-files.svg" alt="Image Description" style="width: 40px;"></a></span>
+				   </div>
+				   <!-- End PDF FIle -->
+				   <% } %>
+				</div>
+			 </div>
+		  </div>
+		  <!-- End Details -->
+	   </div>
+	</div>
+
+</div>
+
+			  <!-- end Resultado -->
+			  </div>
+		     </div>
+		</div>
+	   
+	  </main>
+	  <!-- ========== END MAIN CONTENT ========== -->
+	  <%- include ('partials/public/_bottom'); %>
+
+	  <script>
+                $(document).on('ready', function () { 
+                
+                        
+                        
+                        $("#btnBuscar").click(
+                                function() {
+                                        
+                                        var valor = $("#valorBuscado").val();
+                                        var tipo = $("#tipoBusqueda").val();
+       					if ( !valor ) { 
+						alert("Debe cargar un valor para buscar");
+						$("#valorBuscado").focus();
+						return false;
+					}                         
+                                        window.location.href = "/digesto/results/"+tipo+"/"+valor;
+                                        
+                                }
+                        );
+                
+                });
+        </script>
+</html>

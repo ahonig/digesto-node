@@ -1,0 +1,95 @@
+<%- include ('partials/_header'); %>
+<%- include ('partials/_navMenu'); %>
+<%- include ('partials/_bodyUpper'); %>	
+<div id="content">
+	<div class="row">
+		<div class="col-xs-12 col-sm-7 col-md-7 col-lg-4">
+			<h1 class="page-title txt-color-blueDark">
+				<i class="fa fa-fw fa-list"></i> 
+					Leyes 
+				<span>> 
+				 	Subir Pdf
+				</span>
+			</h1>
+		</div>
+    </div>
+    
+    <section id="widget-grid" class="">
+        <div class="row">
+            <article class="col-sm-12 col-md-12 col-lg-12">
+		<% if ( typeof ley == 'undefined' ) { %> 
+
+		<div class="alert alert-warning alert-block">
+				<a class="close" data-dismiss="alert" href="#">×</a>
+				<h4 class="alert-heading">Error!</h4>
+			   <%=	(typeof err !== 'undefined' ? err : '' ) %>
+			</div> 
+
+		<% } %>
+                <div class="jarviswidget jarviswidget-color-blueDark" id="wid-id-3" data-widget-editbutton="false" data-widget-custombutton="false" data-widget-togglebutton="false" data-widget-deletebutton="false">
+                        <header>
+                                        <span class="widget-icon"> <i class="fa fa-file-pdf"></i> </span>
+                                        <h2>Subir Pdf </h2>
+
+                        </header>
+                        <!-- widget div-->
+                        <div>
+                                        <!-- widget edit box -->
+                                        <div class="jarviswidget-editbox">
+                                                <!-- This area used as dropdown edit box -->
+
+                                        </div>
+                                        <!-- end widget edit box -->
+
+                                        <!-- widget content -->
+                                        <div class="widget-body">
+
+                                                <form class="dropzone" id="mydropzonepdf">
+                                                        <footer>
+                                                                <button id="atras" type="button" class="btn btn-primary">
+                                                                        Cancelar
+                                                                </button>
+                                                        </footer>
+                                                </form>
+
+                                        </div>
+                                        <!-- end widget content -->
+
+                        </div>
+                        <!-- end widget div -->
+
+                </div>
+            </article>
+        </div>
+    </section>
+
+
+</div>
+<%- include ('partials/_bodyBottom'); %>	
+<script src="/digesto/js/plugin/dropzone/dropzone.min.js"></script>
+<script>
+	Dropzone.autoDiscover = false; 
+	$(document).ready(function() {
+
+		pageSetUp();
+		$("#mydropzonepdf").dropzone({
+			paramName: "arquivo",
+			url: "/digesto/admin/laws/uploadPDF/<%= ley._id %>",
+			addRemoveLinks : true,
+			maxFilesize: 30000,
+			maxFiles: 1,
+			acceptedFiles: ".pdf",
+			dictDefaultMessage: '<span class="text-center"><span class="font-lg visible-xs-block visible-sm-block visible-lg-block"><span class="font-lg"><i class="fa fa-caret-right text-danger"></i> Seleccione un archivo Pdf <span class="font-xs"></span></span><span>&nbsp&nbsp<h4 class="display-inline"> (O Click)</h4></span>',
+			dictInvalidFileType: 'Error para subir este tipo de arquivo',
+			dictMaxFilesExceeded: 'So pode enviar um arquivo por vez',
+			dictResponseError: 'Error para subir arquivo!'
+		});
+	
+		$("#atras").click(function(){
+			window.location.replace("http://www.geotechpy.com/digesto/sgbmi/admin/laws/list");
+		});
+
+	});
+	
+</script>
+<%- include ('partials/_footer'); %>

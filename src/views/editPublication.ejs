@@ -1,0 +1,242 @@
+<%- include ('partials/_header'); %>
+<%- include ('partials/_navMenu'); %>
+<%- include ('partials/_bodyUpper'); %>	
+<div id="content">
+	<div class="row">
+		<div class="col-xs-12 col-sm-7 col-md-7 col-lg-4">
+			<h1 class="page-title txt-color-blueDark">
+				<i class="fa fa-fw fa-list-ul"></i> 
+					Configuracion 
+				<span>> 
+					Editar Publicaciones
+				</span>
+			</h1>
+		</div>
+    </div>
+    
+    <section id="widget-grid" class="">
+        <div class="row">
+            <article class="col-sm-12 col-md-12 col-lg-12">
+                <div class="jarviswidget jarviswidget-color-blueDark" id="wid-id-1" data-widget-editbutton="false" data-widget-custombutton="false" data-widget-togglebutton="false" data-widget-deletebutton="false">
+                    <header>
+                        <span class="widget-icon"> <i class="fa fa-plus"></i> </span>
+                        <h2>Complete el formulario </h2>				
+                    </header>
+                    <div>
+                        <div class="jarviswidget-editbox">
+                        </div>
+                        <div class="widget-body no-padding">
+                            <form id="addPublication-form" class="smart-form" novalidate="novalidate" method="POST">
+                                <fieldset>
+                                    <section>
+                                        <label class="input">
+                                            <input type="text" name="publ_titulo" placeholder="Titulo" value="<%= publicacion.publ_titulo %>">
+                                            <b class="tooltip tooltip-bottom-right">Ingrese su Descripcion</b> </label>
+                                    </section>
+
+                                    <div class="row">
+                                        <section class="col col-8">
+						<label>Pagina</label>
+						<select name="pagi_codigo" class="select2">
+						<% for(var i =0; i < paginas.length; i++){ %>
+						   <option value="<%= paginas[i].pagi_codigo %>" <%= (paginas[i].pagi_codigo == publicacion.pagi_codigo ? 'selected="selected"' : '') %> ><%= paginas[i].pagi_descripcion %></option><% } 
+						%>
+						</select> <i></i>
+                                        </section>
+			  	   </div>
+				   <section>
+                                        <label class="input">
+                                            <input type="number" name="publ_orden" placeholder="Orden" value="<%= publicacion.publ_orden %>">
+                                            <b class="tooltip tooltip-bottom-right">Ingrese el Nro. de Orden</b> </label>
+				   </section>
+				   <input type="hidden" name="publ_contenido" placeholder="Contenido" value="<%= publicacion.publ_contenido %>">
+				</fieldset>
+			    </form>
+				<fieldset>
+				   <section>
+       		                                <label> Contenido </label>
+						<div class="summernote"></div>
+						<input type="hidden" name="publ_contenido" placeholder="Contenido" value="<%= publicacion.publ_contenido %>">
+						<b class="tooltip tooltip-bottom-right">Ingrese el Contenido</b>
+        	                   </section>
+                                </fieldset>
+			
+                                <footer>
+                                    <button type="submit" class="btn btn-primary">
+                                        Agregar
+                                    </button>
+                                </footer>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+
+</div>
+<%- include ('partials/_bodyBottom'); %>	
+
+<script src="/digesto/js/plugin/jquery-form/jquery-form.min.js"></script>
+<script src="/digesto/js/plugin/select2/select2.min.js"></script>
+<script src="/digesto/js/plugin/summernote/summernote.min.js"></script>
+<script src="/digesto/js/plugin/summernote/summernote.es-ES.js"></script>
+<script src="/digesto/js/plugin/summernote/summernote-file.js"></script>
+
+<script>
+	$(document).ready(function() {
+
+		pageSetUp();
+
+		var errorClass = 'invalid';
+		var errorElement = 'em';
+		
+		var $addPublicationForm = $('#addPublication-form').validate({
+			errorClass		: errorClass,
+			errorElement	: errorElement,
+			highlight: function(element) {
+				$(element).parent().removeClass('state-success').addClass("state-error");
+				$(element).removeClass('valid');
+			},
+			unhighlight: function(element) {
+				$(element).parent().removeClass("state-error").addClass('state-success');
+				$(element).addClass('valid');
+			},
+
+		// Rules for form validation
+			rules : {
+				publ_titulo : {
+					required : true
+				},
+				pagi_codigo : {
+					number: true,
+					required : true
+				},
+				publ_orden : {
+					number: true,
+					required : true
+				}
+			},
+	
+			messages : {
+				publ_titulo : {
+					required : "Por favor ingrese la descripcion"
+				},
+				pagi_codigo : {
+					number: "Por favor ingrese solo numeros",
+					required : "Por favor ingrese la pagina"
+				},
+				publ_orden : {
+					number: "Por favor ingrese solo numeros",
+					required : "Por favor ingrese el nro. de Orden"
+				}
+			},
+	
+			// Do not change code below
+			errorPlacement : function(error, element) {
+				error.insertAfter(element.parent());
+			},
+
+			submitHandler: function(form) {
+				$("[name='publ_contenido']").val($('.summernote').summernote('code'));
+				form.submit();
+			}
+		});
+
+		$('.summernote').summernote({
+			lang: 'es-ES',
+			height: 200,
+			toolbar: [
+		    ['style', ['style']],
+		    ['font', ['bold', 'italic', 'underline', 'clear']],
+		    ['fontname', ['fontname']],
+		    ['color', ['color']],
+		    ['para', ['ul', 'ol', 'paragraph']],
+		    ['height', ['height']],
+		    ['table', ['table']],
+		    ['insert', ['link', 'picture', 'hr']],
+		    ['view', ['fullscreen', 'codeview', 'help']]
+		  ],
+                  callbacks: {
+                    onFileUpload: function(file) {
+                        myOwnCallBack(file[0]);
+                    }
+                  }
+		});
+		$('.summernote').summernote("code",$("[name='publ_contenido']").val());
+
+		$("[name='publ_titulo']").focus();
+	});
+
+
+
+function myOwnCallBack(file) {
+            const nombre = $('.summernote').summernote('createRange')?.toString();
+            let data = new FormData();
+            data.append("file", file);
+            $.ajax({
+                data: data,
+                type: "POST",
+                url: "upload", //Your own back-end uploader
+                cache: false,
+                contentType: false,
+                processData: false,
+                xhr: function() { //Handle progress upload
+                    let myXhr = $.ajaxSettings.xhr();
+                    if (myXhr.upload) myXhr.upload.addEventListener('progress', progressHandlingFunction, false);
+                    return myXhr;
+                },
+        success: function(reponse) {
+
+            if(reponse.status === true) {
+                let listMimeImg = ['image/png', 'image/jpeg', 'image/webp', 'image/gif', 'image/svg'];
+                let listMimeAudio = ['audio/mpeg', 'audio/ogg'];
+                let listMimeVideo = ['video/mpeg', 'video/mp4', 'video/webm'];
+                let elem;
+                if (listMimeImg.indexOf(file.type) > -1) {
+                    //Picture
+                    $('.summernote').summernote('editor.insertImage', reponse.filename);
+                } else if (listMimeAudio.indexOf(file.type) > -1) {
+                    //Audio
+                    elem = document.createElement("audio");
+                    elem.setAttribute("src", reponse.filename);
+                    elem.setAttribute("controls", "controls");
+                    elem.setAttribute("preload", "metadata");
+                    $('.summernote').summernote('editor.insertNode', elem);
+                } else if (listMimeVideo.indexOf(file.type) > -1) {
+                    //Video
+                    elem = document.createElement("video");
+                    elem.setAttribute("src", reponse.filename);
+                    elem.setAttribute("controls", "controls");
+                    elem.setAttribute("preload", "metadata");
+                    $('.summernote').summernote('editor.insertNode', elem);
+                } else {
+                    //Other file type
+                    elem = document.createElement("a");
+                    let linkText = document.createTextNode(nombre);
+                    elem.appendChild(linkText);
+                    elem.title = file.name;
+                    elem.href = "/digesto/uploads/"+reponse.filename;
+                    elem.target = "_blank";
+                    $('.summernote').summernote('editor.insertNode', elem);
+                }
+            }
+        }
+    });
+}
+
+
+function progressHandlingFunction(e) {
+    if (e.lengthComputable) {
+        //Log current progress
+        console.log((e.loaded / e.total * 100) + '%');
+
+        //Reset progress on complete
+        if (e.loaded === e.total) {
+            console.log("Upload finished.");
+        }
+    }
+}
+	
+</script>
+<%- include ('partials/_footer'); %>

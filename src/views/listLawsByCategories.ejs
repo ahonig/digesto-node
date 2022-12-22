@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+  <%- include ('partials/public/_header'); %>
+
+  <!-- ========== MAIN CONTENT ========== -->
+  <main id="content" role="main">
+    <div class="bg-primary">
+        <div class="container space-1">
+            <div class="row">
+                <div class="col-lg-5 mb-4 mb-lg-0">
+                  <!-- Input -->
+                  <label class="d-block">
+                    <span class="h4 d-block text-white font-weight-semi-bold mb-0">Qu&eacute;</span>
+                  </label>
+                  <div class="js-focus-state">
+                    <div class="input-group">
+                      <input type="text" class="form-control" id="valorBuscado" placeholder="Palabras clave o títulos" aria-label="Palabras clave o títulos" aria-describedby="keywordInputAddon">
+                      <div class="input-group-append">
+                        <span class="input-group-text">
+                          <span class="fas fa-search" id="keywordInputAddon"></span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Input -->
+                </div>
+
+                <div class="col-lg-5 mb-4 mb-lg-0">
+                  <!-- Input -->
+                  <label class="d-block">
+                    <span class="h4 d-block text-white font-weight-semi-bold mb-0">d&oacute;nde</span>
+                  </label>
+                  <div class="js-focus-state">
+                    <div class="input-group">
+                      <select class="form-control select2" id="tipoBusqueda">
+                        <option value="todo">Todo</option>
+                        <option value="titulo">Titulo y por palabra dentro de la Norma</option>
+                        <option value="numero">Nro de norma</option>
+                        <option value="nombre">Nombre Popular</option>
+                        <option value="anho">Por año de Promulgación</option>
+                      </select>
+                    </div>
+                  </div>
+                  <!-- End Input -->
+                </div>
+
+                <div class="col-lg-2 align-self-lg-end">
+                    <a class="btn btn-sm btn-soft-white transition-3d-hover" id="btnBuscar" href="#">
+                        <span class="fas fa-search small mr-2"></span>
+                        Buscar
+                      </a>
+                </div>
+              </div>
+        </div>
+    </div>
+
+    <div class="bg-light">
+        <div class="container space-2">
+          <div class="row">
+            <div class="col-lg-3 mb-7 mb-lg-0">
+ 
+              <!-- Categorias  -->
+              <div class="card mb-4" >
+                <div class="card-header pt-4 pb-3 px-0 mx-4">
+                  <h2 class="h6 mb-0">Categor&iacute;as</h2>
+                </div>
+  
+                <div class="card-body pt-3 pb-4 px-4">
+                
+                <% 
+                if ( typeof categoriasNivel1 != 'undefined' ) { 
+                    for(var i =0; i < categoriasNivel1.length; i++){ %>
+                        <a class="d-flex align-items-start mb-4" style="margin-bottom: 0 !important;" href="/digesto/laws/categories/<%= categoriasNivel1[i].cate_codigo %>" target="_self">
+                            <div class="ml-3">
+                            <span class="d-block text-dark"> <%= categoriasNivel1[i].cate_codigo %>. <%= categoriasNivel1[i].cate_descripcion %>.</span>
+                            </div>
+                        </a>
+                <% 
+                         }
+                } %>
+
+                </div>
+              </div>
+              <!-- End Categorias -->
+            </div>
+	      <!-- Resultados -->
+	    <% if ( leyes[0].metadata.length > 0) { %>  
+            <div class="card col-lg-9 ">
+
+                <div class="mt-3" style="margin-bottom: 0 !important;" >
+
+                    <h2 class="h4"><%= titulo %> (<%= limit %>/<%= leyes[0].metadata[0].total %>)</span></h2>
+
+                </div>
+
+                <% for (var l = 0; l < leyes[0].data.length; l++) { %>
+								<!-- Info -->
+					<div class="card mb-5">
+					   <div class="card-body p-4">
+						  <!-- Details -->
+						  <div class="media d-block d-sm-flex">
+							 <div class="media-body">
+								<!-- Header -->
+								<div class="media mb-2">
+								   <div class="media-body">
+									  <h1 class="h5 mb-1">
+										 <a href="/digesto/laws/<%= leyes[0].data[l]._id %>"><%= leyes[0].data[l].leye_numero %></a>
+									  </h1>
+									  <ul class="list-inline font-size-1 text-muted">
+										 <li class="list-inline-item">
+											<strong>Promulgaci&oacute;n:</strong> <%= leyes[0].data[l].leye_fecha_promulgacion %>
+										 </li>
+										  <li class="list-inline-item">
+                                                                                        <strong> Sanci&oacute;n:</strong> <%= leyes[0].data[l].leye_fecha_sancion %>
+                                                                                 </li>
+									  </ul>
+								   </div>
+								</div>
+								<!-- End Header -->
+								<div class="mb-5">
+								   <p><%= leyes[0].data[l].leye_titulo %></p>
+								</div>
+								<div class="d-md-flex align-items-md-center">
+								   <% if ( leyes[0].data[l].leye_doc != "" && leyes[0].data[l].leye_doc != null ) { %>
+								   <!-- WORD -->
+								   <div class="u-ver-divider u-ver-divider--none-md pr-4 mb-3 mb-md-0 mr-4">
+									  <h2 class="small text-secondary mb-0">Archivo word</h2>
+									  <span class="align-middle"><a href="/digesto/files/<%= leyes[0].data[l].leye_doc %>" target="_blank"><img class="mr-2" src="/digesto/assets/svg/flat-icons/word-files.svg" alt="Image Description" style="width: 40px;"></a></span>
+								   </div>
+								   <!-- End WORD FIle -->
+								   <% } %>
+								   <% if ( leyes[0].data[l].leye_pdf != "" && leyes[0].data[l].leye_pdf != null ) { %>
+								   <!-- PDF -->
+								   <div class="u-ver-divider u-ver-divider--none-md pr-4 mb-3 mb-md-0 mr-4">
+									  <h2 class="small text-secondary mb-0">Archivo PDF</h2>
+									  <span class="align-middle"><a href="/digesto/files/<%= leyes[0].data[l].leye_pdf %>" target="_blank"><img class="mr-2" src="/digesto/assets/svg/flat-icons/pdf-files.svg" alt="Image Description" style="width: 40px;"></a></span>
+								   </div>
+								   <!-- End PDF FIle -->
+								   <% } %>
+								  <div class="ml-md-auto">
+									<a class="btn btn-sm btn-soft-primary transition-3d-hover" href="/digesto/laws/<%= leyes[0].data[l]._id %>">
+                            							<span class="fas fa-arrow-right mr-2"></span>
+							                        Detalles
+						                        </a>
+					                          </div>
+								</div>
+							 </div>
+						  </div>
+						  <!-- End Details -->
+					   </div>
+					</div>
+					<!-- End Info -->
+
+                <% } %>
+
+
+
+		<% if ( sgteLimite > 0 ) { %>
+
+
+
+                <a class="btn btn-block btn-soft-primary transition-3d-hover" href="/digesto/laws/categories/<%= categoriaId %>/<%= sgteLimite %>">Ver M&aacute;s</a>
+
+
+
+		<% } %>
+
+            </div>
+	    <% } else { %>
+
+
+
+            <div class="card w-md-60 text-center mx-auto mb-7">
+
+                    <h2 class="font-weight-semi-bold">No encontrado <%= leyes[0].metadata.length %></h2>
+
+                    <p>Continue seleccionado otras categorias.</p>
+
+                  </div>
+
+    
+
+    
+
+        <% } %>
+	    <!-- end Resultado -->
+          </div>
+        </div>
+    </div>
+
+   
+  </main>
+  <!-- ========== END MAIN CONTENT ========== -->
+  <%- include ('partials/public/_bottom'); %>
+
+          <script>
+                $(document).on('ready', function () { 
+                
+               		        var valor, tipo;
+
+                        $("#searchForm").on('submit', function(e){
+                                valor = $("#valorBuscado").val();
+                                tipo = $("#tipoBusqueda").val();
+                                
+                                if ( valor ) {
+                                       window.location.href = "/digesto/results/"+tipo+"/"+valor;
+                                       return false;
+                                } else {
+                                        alert("El texto de busqueda es obligatorio");
+                                        $("#valorBuscado").focus();
+                                        return false;
+                                }
+                                
+                        });     
+
+
+        
+                        
+                        $("#btnBuscar1").click( function(){
+                                $("#searchForm").submit();
+                        });
+
+                        
+                        
+                        $("#btnBuscar").click(function(){
+                        
+                                $("#searchForm").submit();
+
+                        });
+ 
+                        
+                
+                });
+        </script>
+</html>

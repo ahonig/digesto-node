@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+  <%- include ('partials/public/_header'); %>
+  <!-- ========== MAIN CONTENT ========== -->
+
+
+	<main id="content" role="main">
+    <!-- Hero Section -->
+    <div class="dzsparallaxer auto-init height-is-based-on-content use-loading mode-scroll"
+         data-options='{direction: "normal"}'>
+      <!-- Apply your Parallax background image here -->
+      <div class="divimage dzsparallaxer--target" style="height: 120%; background-image: url('/digesto/assets/img/1920x800/img13.jpg');"></div>
+
+      <!-- Content -->
+      <div class="container position-relative space-2 space-top-md-5 space-bottom-md-3 z-index-2">
+        <div class="w-lg-80 text-center mx-auto">
+          <h1 class="display-3 font-size-md-down-5 text-white font-weight-semi-bold">Tienes una pregunta?</h1>
+          <p class="lead text-white">Nos encantaría hablar sobre cómo podemos ayudarte.</p>
+        </div>
+      </div>
+      <!-- End Content -->
+    </div>
+    <!-- End Hero Section -->
+
+    <!-- Contacts Info Section -->
+    <div class="clearfix space-2">
+      <div class="row no-gutters">
+        <div class="col-sm-6 col-lg-3 u-ver-divider u-ver-divider--none-lg">
+          <!-- Contacts Info -->
+          <div class="text-center p-5">
+            <figure id="icon8" class="svg-preloader ie-height-56 max-width-8 mx-auto mb-3">
+              <img class="js-svg-injector" src="/digesto/assets/svg/icons/icon-8.svg" alt="SVG"
+                   data-parent="#icon8">
+            </figure>
+            <h2 class="h6 mb-0">Direcci&oacute;n</h2>
+            <p class="mb-0">Palacio Legislativo, PB, 14 de Mayo y Avenida República</p>
+          </div>
+          <!-- End Contacts Info -->
+        </div>
+
+        <div class="col-sm-6 col-lg-3 u-ver-divider u-ver-divider--none-lg">
+          <!-- Contacts Info -->
+          <div class="text-center p-5">
+            <figure id="icon15" class="svg-preloader ie-height-56 max-width-8 mx-auto mb-3">
+              <img class="js-svg-injector" src="/digesto/assets/svg/icons/icon-15.svg" alt="SVG"
+                   data-parent="#icon15">
+            </figure>
+            <h3 class="h6 mb-0">Email</h3>
+            <p class="mb-0">digesto@senado.gov.py</p>
+          </div>
+          <!-- End Contacts Info -->
+        </div>
+
+        <div class="col-sm-6 col-lg-3 u-ver-divider u-ver-divider--none-lg">
+          <!-- Contacts Info -->
+          <div class="text-center p-5">
+            <figure id="icon16" class="svg-preloader ie-height-56 max-width-8 mx-auto mb-3">
+              <img class="js-svg-injector" src="/digesto/assets/svg/icons/icon-16.svg" alt="SVG"
+                   data-parent="#icon16">
+</figure>
+            <h3 class="h6 mb-0">Telefono</h3>
+            <p class="mb-0">(021) 414 5000</p>
+          </div>
+          <!-- End Contacts Info -->
+        </div>
+
+        <div class="col-sm-6 col-lg-3">
+          <!-- Contacts Info -->
+          <div class="text-center p-5">
+            <figure id="icon17" class="svg-preloader ie-height-56 max-width-8 mx-auto mb-3">
+              <img class="js-svg-injector" src="/digesto/assets/svg/icons/icon-17.svg" alt="SVG"
+                   data-parent="#icon17">
+            </figure>
+            <h3 class="h6 mb-0">Fax</h3>
+            <p class="mb-0">(021) 414 5000</p>
+          </div>
+          <!-- End Contacts Info -->
+        </div>
+      </div>
+    </div>
+    <!-- End Contacts Info Section -->
+
+    <hr class="my-0">
+
+    <!-- Contact Form Section -->
+    <div class="container space-2 space-md-3">
+      <!-- Title -->
+      <div class="w-md-80 w-lg-50 text-center mx-md-auto mb-9">
+        <span class="btn btn-xs btn-soft-success btn-pill mb-2">Dejar un mensaje</span>
+        <h2 class="text-primary font-weight-normal">Cu&eacute;ntanos acerca de <span class="font-weight-semi-bold">t&iacute;</span></h2>
+        <p>Si tiene preguntas o simplemente le gustar&iacute;a saludarnos, cont&aacute;ctenos.</p>
+      </div>
+      <!-- End Title -->
+
+      <div class="w-lg-80 mx-auto">
+        <!-- Contacts Form -->
+        <form class="js-validate" method="post">
+          <div class="row">
+            <!-- Input -->
+            <div class="col-sm-6 mb-6">
+              <div class="js-form-message">
+                <label class="form-label">
+                  Nombre
+                  <span class="text-danger">*</span>
+                </label>
+
+                <input type="text" class="form-control" name="name" placeholder="Juan Gonzalez" aria-label="Juan Gonzalez" required
+                       data-msg="Por favor ingrese su nombre"
+                       data-error-class="u-has-error"
+                       data-success-class="u-has-success">
+              </div>
+            </div>
+            <!-- End Input -->
+
+            <!-- Input -->
+            <div class="col-sm-6 mb-6">
+              <div class="js-form-message">
+                <label class="form-label">
+                  Tu correo electr&oacute;nico
+                  <span class="text-danger">*</span>
+                </label>
+<input type="email" class="form-control" name="email" placeholder="jgonzalez@gmail.com" aria-label="jgonzalez@gmail.com" required
+                       data-msg="Por favor ingrese un correo"
+                       data-error-class="u-has-error"
+                       data-success-class="u-has-success">
+              </div>
+            </div>
+            <!-- End Input -->
+
+            <div class="w-100"></div>
+
+            <!-- Input -->
+            <div class="col-sm-6 mb-6">
+              <div class="js-form-message">
+                <label class="form-label">
+                  Asunto
+                  <span class="text-danger">*</span>
+                </label>
+
+                <input type="text" class="form-control" name="subject" placeholder="Ley 15/2022" aria-label="Ley 15/2022" required
+                       data-msg="Por favor ingrese el asunto"
+                       data-error-class="u-has-error"
+                       data-success-class="u-has-success">
+              </div>
+            </div>
+            <!-- End Input -->
+
+            <!-- Input -->
+            <div class="col-sm-6 mb-6">
+              <div class="js-form-message">
+                <label class="form-label">
+                  Tu n&uacute;mero de tel&eacute;fono
+                  <span class="text-danger">*</span>
+                </label>
+
+                <input type="number" class="form-control" name="phone" placeholder="09810019211" aria-label="09810019211" required
+                       data-msg="Por favor ingrese un numero de telefono"
+                       data-error-class="u-has-error"
+                       data-success-class="u-has-success">
+              </div>
+            </div>
+            <!-- End Input -->
+          </div>
+
+          <!-- Input -->
+          <div class="js-form-message mb-6">
+            <label class="form-label">
+              C&oacute;mo podemos ayudarte?
+              <span class="text-danger">*</span>
+            </label>
+
+            <div class="input-group">
+              <textarea class="form-control" rows="4" name="text" placeholder="Hola, me gustaria ..." aria-label="Hola, me gustaria ..." required
+                        data-msg="Por favor ingrese una razon"
+                        data-error-class="u-has-error"
+                        data-success-class="u-has-success"></textarea>
+            </div>
+          </div>
+          <!-- End Input -->
+<div class="text-center">
+            <button type="submit" class="btn btn-primary btn-wide transition-3d-hover mb-4">Enviar</button>
+            <p class="small">Lo/a contactaremos en 1-2 días hábiles.</p>
+          </div>
+        </form>
+        <!-- End Contacts Form -->
+      </div>
+    </div>
+    <!-- End Contact Form Section -->
+</main>
+
+
+
+
+
+  <!-- ========== END MAIN CONTENT ========== -->
+  <%- include ('partials/public/_bottom'); %>
+</html>

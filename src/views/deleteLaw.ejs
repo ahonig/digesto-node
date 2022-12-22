@@ -1,0 +1,148 @@
+<%- include ('partials/_header'); %>
+<%- include ('partials/_navMenu'); %>
+<%- include ('partials/_bodyUpper'); %>	
+<div id="content">
+	<div class="row">
+		<div class="col-xs-12 col-sm-7 col-md-7 col-lg-4">
+			<h1 class="page-title txt-color-blueDark">
+				<i class="fa fa-fw fa-user"></i> 
+					Configuracion 
+				<span>> 
+					Eliminar Ley
+				</span>
+			</h1>
+		</div>
+    </div>
+    
+    <section id="widget-grid" class="">
+        <div class="row">
+            <article class="col-sm-12 col-md-12 col-lg-12">
+                <div class="jarviswidget jarviswidget-color-blueDark" id="wid-id-1" data-widget-editbutton="false" data-widget-custombutton="false" data-widget-togglebutton="false" data-widget-deletebutton="false">
+                    <header>
+                        <span class="widget-icon"> <i class="fa fa-plus"></i> </span>
+                        <h2>Complete el formulario </h2>				
+                    </header>
+                    <div>
+                        <div class="jarviswidget-editbox">
+                        </div>
+                        <div class="widget-body">
+                            <form id="deleteLaw-form" class="" novalidate="novalidate" method="POST" enctype="multipart/form-data">
+                                <fieldset>
+									<div class="row">
+										<div class="col-sm-12">
+											<div class="form-group">
+												<label>Nro. de Ley:</label>
+												<input type="text" name="leye_numero" placeholder="Ej.: 1234/2020" class="form-control" value="<%= ley.leye_numero %>">
+											</div>
+										</div>
+									</div>
+                                  
+									<div class="row">
+										<div class="col-sm-12">
+											<div class="form-group">
+												<label>T&iacute;tulo de Ley:</label>
+												<input type="text" name="leye_titulo" placeholder="Ej.: Ley sobre el limite del horario de venta de alcohol" class="form-control" value="<%= ley.leye_titulo %>">
+											</div>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<div class="select-group">
+											<label>Categor&iacute;a</label>
+											<select name="cate_codigo" class="select2">
+												<% for(var i =0; i < categorias.length; i++){ %>
+													<option value="<%= categorias[i].cate_codigo %>" <%= (categorias[i].cate_codigo == ley.cate_codigo ? 'selected="selected"' : '') %> ><%= categorias[i].cate_codigo %> - <%= categorias[i].cate_descripcion %></option>	
+												<% } %>
+											</select> <i></i>
+										</div>
+									</div>
+                                   					
+									<div class="form-group">
+                                                                                <div class="select-group">
+                                                                                        <label>Textos Ordenados</label>
+                                                                                        <select name="text_codigo" class="select2">
+                                                                                                <% for(var i =0; i < textos.length; i++){ %>
+                                                                                                        <option value="<%= textos[i].text_codigo %>" <%= (textos[i].text_codigo == ley.text_codigo ? 'selected="selected"' : '') %> ><%= textos[i].text_codigo %> - <%= textos[i].text_descripcion %></option>
+                                                                                                <% } %>
+                                                                                        </select> <i></i>
+                                                                                </div>
+                                                                        </div>
+	
+									<div class="form-group">
+										<label>Fecha Sanci&oacute;n</label>
+										<div class="input-group">
+											<input type="text" name="leye_fecha_sancion" class="form-control" data-mask="99/99/9999" data-mask-placeholder= "-" value="<%= ley.leye_fecha_sancion %>">
+											<span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label>Fecha Promulgaci&oacute;n</label>
+										<div class="input-group">
+											<input type="text" name="leye_fecha_promulgacion" class="form-control" data-mask="99/99/9999" data-mask-placeholder= "-" value="<%= ley.leye_fecha_promulgacion %>">
+											<span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+										</div>
+									</div>
+
+									<div class="row">
+										<div class="col-sm-12">
+											<div class="form-group">
+												<label>Nombre Popular:</label>
+												<input type="text" name="leye_nombre_popular" placeholder="Ej.: Ley Seca" class="form-control" value="<%= ley.leye_nombre_popular %>">
+											</div>
+										</div>
+									</div>
+
+									<div class="row">
+										<div class="col-sm-12">
+											<div class="form-group">
+												<label>Contenido de la Ley:</label>
+												<textarea rows="10" type="text" name="leye_contenido" placeholder="Ej.: La ley define los horarios limites para la compra de alcohol en el territorio nacional" class="form-control"><%= ley.leye_contenido %></textarea>
+											</div>
+										</div>
+									</div>
+                                <footer>
+                                    <button type="submit" class="btn btn-primary">
+                                        Eliminar
+                                    </button>
+                                </footer>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+</div>
+<%- include ('partials/_bodyBottom'); %>	
+<script src="/digesto/js/plugin/select2/select2.min.js"></script>
+<script src="/digesto/js/plugin/summernote/summernote.min.js"></script>
+
+<script>
+	$(document).ready(function() {
+	
+	
+		pageSetUp();
+        
+
+        $('select').prop('disabled', true);
+		$('.summernote').summernote({
+			height: 200,
+			toolbar: [
+		    ['style', ['style']],
+		    ['font', ['bold', 'italic', 'underline', 'clear']],
+		    ['fontname', ['fontname']],
+		    ['color', ['color']],
+		    ['para', ['ul', 'ol', 'paragraph']],
+		    ['height', ['height']],
+		    ['table', ['table']],
+		    ['insert', ['link', 'picture', 'hr']],
+		    ['view', ['fullscreen', 'codeview', 'help']]
+		  ]
+		});
+        $('.summernote').summernote("code",$("[name='publ_contenido']").val());
+        $('.summernote').summernote('disable');
+	});
+	
+</script>
+<%- include ('partials/_footer'); %>

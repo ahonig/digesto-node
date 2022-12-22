@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="es">
+  <%- include ('partials/public/_header'); %>
+  <!-- ========== MAIN CONTENT ========== -->
+  <main id="content" role="main">
+    <!-- Hero Section -->
+    <div class="position-relative">
+      <!-- Slick Carousel -->
+      <div class="js-slick-carousel u-slick"
+           data-fade="false"
+           data-autoplay="false"
+           data-speed="10000"
+           data-infinite="true">
+        <div class="js-slide">
+          <div class="bg-img-hero min-height-620" style="background-image: url(./assets/img/1920x800/hero_digesto_final.jpg);"></div>
+        </div>
+        <div class="js-slide">
+          <div class="bg-img-hero min-height-620" style="background-image: url(./assets/img/1920x800/hero_digesto_final.jpg);"></div>
+        </div>
+      </div>
+      <!-- End Slick Carousel -->
+
+      <div class="container position-absolute right-0 bottom-0 left-0 space-top-5 space-bottom-2">
+
+        <div class="card border-0">
+          <div class="card-body p-3">
+            <!-- Search Jobs Form -->
+            <form id="searchForm" class="js-validate" autocomplete="off">
+              <div class="row">
+                <div class="col-lg-5 mb-4 mb-lg-0">
+                  <div class="js-focus-state">
+                    <div class="input-group">
+                      <input type="text" id="valorBuscado" class="form-control" placeholder="Palabras clave o t&iacute;tulos" aria-label="Palabras clave o t&iacute;tulos" aria-describedby="keywordInputAddon">
+                      <div class="input-group-append" id="btnBuscar1">
+                        <span class="input-group-text">
+                          <span class="fas fa-search" id="keywordInputAddon"></span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Input -->
+                </div>
+
+                <div class="col-lg-5 mb-4 mb-lg-0">
+
+                  <div class="js-focus-state">
+                    <div class="input-group">
+                      <select class="form-control select2" id="tipoBusqueda" >
+                        <option value="todo">Todo</option>
+                        <option value="titulo">Titulo y por palabra dentro de la Norma</option>
+                        <option value="numero">Nro de norma</option>
+                        <option value="nombre">Nombre Popular</option>
+                        <option value="anho">Por a&ntilde;o de Promulgación</option>
+                        <option value="resolucion">Por Nro. de Resoluci&oacute;n</option>
+                      </select>
+                    </div>
+                  </div>
+                  <!-- End Input -->
+                </div>
+
+                <div class="col-lg-2 align-self-lg-end">
+                  <button id="btnBuscar" type="button" class="btn btn-block btn-primary transition-3d-hover">Buscar</button>
+                </div>
+              </div>
+              <!-- End Checkbox -->
+            </form>
+            <!-- End Search Jobs Form -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Hero Section -->
+    <!-- Services Section -->
+<div class="container" style="margin-top: 6px !important;">
+  <div class="row">
+    <div class="col-lg-6 mb-3 mb-lg-0 mt-4">
+      <!-- Card -->
+      <div class="card border-0 bg-primary text-white shadow h-100 overflow-hidden p-6">
+        <div class="w-65 pr-2">
+          <h3 class="h3 font-weight-medium">&iquest;Qu&eacute; hacemos en el Digesto?</h3>
+          <p class="text-white">Brindamos información y asesoramiento legislativo a la ciudadanía en general, a los honorables miembros del Poder Legislativo y a las autoridades nacionales e internacionales</p>
+        </div>
+        <div class="position-absolute right-0 bottom-0 w-50 mb-n3 mr-n4">
+          <img class="img-fluid" src="/digesto/assets/img/mockups/img15.png" alt="Image Description">
+        </div>
+      </div>
+      <!-- End Card -->
+    </div>
+
+    <div class="col-lg-6 mt-4">
+      <!-- Card -->
+      <div class="card border-0 bg-success text-white shadow h-100 overflow-hidden p-6">
+        <div class="w-65 pr-2">
+          <h3 class="h3 font-weight-medium">Importancia</h3>
+          <p class="text-white">Es la Unidad designada por la HCS, como orden competente de mantener actualizado y a disposici&oacute;n del p&uacute;blico, de manera informatizada una base de datos de leyes de la Rep&uacute;blica</p>
+        </div>
+        <div class="position-absolute right-0 bottom-0 w-50 mb-n3 mr-n4">
+          <img class="img-fluid" src="/digesto/assets/img/mockups/img12.png" alt="Image Description">
+        </div>
+      </div>
+      <!-- End Card -->
+    </div>
+  </div>
+</div>
+<!-- End Services Section -->
+
+<br>
+    <!-- Features Section -->
+<div class="tab-wrapper container space-1 space-lg-1" >
+    <h2 class="hs-docs-heading h4">Categorias</h2>
+    <!-- Icon Blocks -->
+    <div class="row mb-1">
+      <% if ( typeof categoriaNivel1 != 'undefined' ) { 
+          for(var i =0; i < categoriaNivel1.length; i++){ %>
+
+            <div class="col-sm-6 col-md-4 mb-7">
+              <!-- Icon Block -->
+              <div class="media align-items-center mb-2">
+                <figure id="icon<%= categoriaNivel1[i].cate_codigo %>" class="svg-preloader ie-height-40 w-100 max-width-6 mr-3">
+                  <img class="js-svg-injector" src="./assets/svg/icons/icon-<%= categoriaNivel1[i].cate_codigo %>.svg" alt="SVG"
+                      data-parent="#icon<%= categoriaNivel1[i].cate_codigo %>">
+                </figure>
+                <div class="media-body">
+                  <h3 class="h5 mb-0 text-primary"><%= categoriaNivel1[i].cate_codigo %>.<%= categoriaNivel1[i].cate_descripcion %> </h3>
+                  <small class="text-secondary">(<%= ( categoriaNivel1[i].cantidad && categoriaNivel1[i].cantidad.length > 0  ) ? categoriaNivel1[i].cantidad[0].leyes  :"0" %>)</small>
+                </div>
+              </div>
+              <p></p>
+              <p></p>
+
+	      <div id="basicsAccordion<%= categoriaNivel1[i].cate_codigo %>">
+			
+		<% 
+		   if ( typeof categoriaNivel2 != 'undefined' ) { 
+                        for(var j =0; j < categoriaNivel2.length; j++){
+                                if ( categoriaNivel2[j].cate_codigo_padre == categoriaNivel1[i].cate_codigo  ) {
+                 %>
+
+			<div class="card mb-3">
+                    		<div class="card-header card-collapse" id="basicsHeading<%= j %>">
+                      			<h5 class="mb-0">
+            <% if ( categoriaNivel2[j].hijos > 0 ) { %>
+						
+              <button type="button" style="padding: 0px !important;" 
+                                                        class="btn btn-link btn-block d-flex justify-content-between collapsed card-btn p-3" data-toggle="collapse"
+                                                        data-target="#basicsCollapse<%= j %>"
+                                                        aria-expanded="false"
+                                                        aria-controls="basicsCollapse<%= j %>">
+                                                             &nbsp; <%= categoriaNivel2[j].cate_codigo %>. <%= categoriaNivel2[j].cate_descripcion %>
+                                                             <span class="card-btn-arrow"> <span class="fas fa-arrow-down small"></span> </span>
+                                                </button>	
+            <% }else { %>
+              
+              <button type="button" style="padding: 0px !important;" class="btn btn-link btn-block d-flex justify-content-between collapsed card-btn p-3"
+                      onclick=" window.open('<%= categoriaNivel2[j].link %>','_blank')">
+
+                      &nbsp; <%= categoriaNivel2[j].cate_codigo %>. <%= categoriaNivel2[j].cate_descripcion %>
+                      <span class="card-btn-arrow"> <span class="fas fa-arrow-down small"></span> </span>
+
+              </button>
+
+            <% } %>
+                      			</h5>
+                    		</div>
+				
+				<div id="basicsCollapse<%= j %>" class="collapse"
+                          		aria-labelledby="basicsHeading<%= j %>"
+                          		data-parent="#basicsAccordion<%= categoriaNivel1[i].cate_codigo %>">
+                      			<div class="card-body">
+                        		<% if ( typeof categoriaNivel3 != 'undefined' ) { 
+                        			for(var k =0; k < categoriaNivel3.length; k++){
+                                			if ( categoriaNivel3[k].cate_codigo_padre == categoriaNivel2[j].cate_codigo  ) {
+                                        if ( categoriaNivel3[k].link == "" ){ 
+                             %>
+                                      <%= categoriaNivel3[k].cate_codigo %>.<%= categoriaNivel3[k].cate_descripcion %> <br>			
+                             <%  } else { %>
+                              <a target="_blank" href="<%= categoriaNivel3[k].link %>"><%= categoriaNivel3[k].cate_codigo %>.<%= categoriaNivel3[k].cate_descripcion %></a> <br>			    
+                             <% }}}} %>
+                      			</div>
+                    		</div>
+			</div>
+
+
+		<%       
+				}
+			}
+		   }	
+		%>
+		</div>			
+            </div>
+
+      <% 
+          }
+        }
+      %> 
+          
+
+    </div>
+    <!-- End Icon Blocks -->
+</div>
+
+<div class="tab-wrapper container space-1 space-lg-1" >
+    <h2 class="hs-docs-heading h4">Textos Ordenados</h2>
+    <div class="row mb-1">
+      <% if ( typeof textoNivel1 != 'undefined' ) {
+          for(var i =0; i < textoNivel1.length; i++){ %>
+
+            <div class="col-sm-6 col-md-4 mb-7">
+              <!-- Icon Block -->
+              <div class="media align-items-center mb-2">
+                <figure id="iconText<%= textoNivel1[i].text_codigo %>" class="svg-preloader ie-height-40 w-100 max-width-6 mr-3">
+                  <img class="js-svg-injector" src="./assets/svg/icons/icon-<%= textoNivel1[i].text_codigo %>.svg" alt="SVG"
+                      data-parent="#iconText<%= textoNivel1[i].text_codigo %>">
+                </figure>
+                <div class="media-body">
+                  <h3 class="h5 mb-0 text-primary"><%= textoNivel1[i].text_codigo %>.<%= textoNivel1[i].text_descripcion %> </h3>
+                  <small class="text-secondary">(<%= ( textoNivel1[i].cantidad && textoNivel1[i].cantidad.length > 0  ) ? textoNivel1[i].cantidad[0].leyes  :"0" %>)</small>
+                </div>
+              </div>
+              <p></p>
+              <p></p>
+
+              <div id="basicsAccordionText<%= textoNivel1[i].text_codigo %>">
+
+                <%
+                   if ( typeof textoNivel2 != 'undefined' ) {
+                        for(var j =0; j < textoNivel2.length; j++){
+                                if ( textoNivel2[j].text_codigo_padre == textoNivel1[i].text_codigo  ) {
+                 %>
+
+                        <div class="card mb-3">
+                                <div class="card-header card-collapse" id="basicsHeadingText<%= j %>">
+                                        <h5 class="mb-0">
+            <% if ( textoNivel2[j].hijos > 0 ) { %>
+
+              <button type="button" style="padding: 0px !important;"
+                                                        class="btn btn-link btn-block d-flex justify-content-between collapsed card-btn p-3" data-toggle="collapse"
+                                                        data-target="#basicsCollapseText<%= j %>"
+                                                        aria-expanded="false"
+                                                        aria-controls="basicsCollapseText<%= j %>">
+                                                             &nbsp; <%= textoNivel2[j].text_codigo %>. <%= textoNivel2[j].text_descripcion %>
+                                                             <span class="card-btn-arrow"> <span class="fas fa-arrow-down small"></span> </span>
+                                                </button>
+            <% }else { %>
+
+              <button type="button" style="padding: 0px !important;" class="btn btn-link btn-block d-flex justify-content-between collapsed card-btn p-3"
+                      onclick=" window.open('<%= textoNivel2[j].link %>','_blank')">
+
+                      &nbsp; <%= textoNivel2[j].text_codigo %>. <%= textoNivel2[j].text_descripcion %>
+                      <span class="card-btn-arrow"> <span class="fas fa-arrow-down small"></span> </span>
+
+              </button>
+ <% } %>
+                                        </h5>
+                                </div>
+
+                                <div id="basicsCollapseText<%= j %>" class="collapse"
+                                        aria-labelledby="basicsHeadingText<%= j %>"
+                                        data-parent="#basicsAccordionText<%= textoNivel1[i].text_codigo %>">
+                                        <div class="card-body">
+                                        <% if ( typeof textoNivel3 != 'undefined' ) {
+                                                for(var k =0; k < textoNivel3.length; k++){
+                                                        if ( textoNivel3[k].text_codigo_padre == textoNivel2[j].text_codigo  ) {
+                                        if ( textoNivel3[k].link == "" ){
+                             %>
+                                      <%= textoNivel3[k].text_codigo %>.<%= textoNivel3[k].text_descripcion %> <br>
+                             <%  } else { %>
+                              <a target="_blank" href="<%= textoNivel3[k].link %>"><%= textoNivel3[k].text_codigo %>.<%= textoNivel3[k].text_descripcion %></a> <br>
+                             <% }}}} %>
+                                        </div>
+                                </div>
+                        </div>
+
+
+                <%
+                                }
+                        }
+                   }
+                %>
+                </div>
+            </div>
+
+      <%
+          }
+        }
+      %>
+
+
+    </div>
+    <!-- End Icon Blocks -->
+
+
+  
+    <div class="text-center">
+      <div class="mb-3">
+        <a class="btn btn-primary btn-wide transition-3d-hover mb-2 mb-sm-0 mx-1" href="/digesto/courses">Incribase a los cursos</a>
+        <a class="btn btn-outline-primary btn-wide transition-3d-hover mb-2 mb-sm-0 mx-1" href="/digesto/contacts">Contactenos</a>
+      </div>
+  
+      <p class="small">Todos los cursos son gratuitos</p>
+    </div>
+  </div>
+  <!-- End Features Section -->
+  </main>
+
+  <style>
+	#btnBuscar1 {
+
+		cursor: pointer;
+
+	}
+  </style>
+  <!-- ========== END MAIN CONTENT ========== -->
+
+	<%- include ('partials/public/_bottom'); %>
+	<script>
+		$(document).on('ready', function () { 
+			var valor, tipo;
+
+			$("#searchForm").on('submit', function(e){
+				valor = $("#valorBuscado").val();
+                                tipo = $("#tipoBusqueda").val();
+				
+				if ( valor ) {
+                                       window.location.href = "/digesto/results/"+tipo+"/"+valor;
+				       return false;
+                                } else {
+                                        alert("El texto de busqueda es obligatorio");
+                                        $("#valorBuscado").focus();
+					return false;
+                                }
+				
+			});	
+
+
+	
+			
+			$("#btnBuscar1").click( function(){
+				$("#searchForm").submit();
+                        });
+
+			
+			
+			$("#btnBuscar").click(function(){
+			
+				$("#searchForm").submit();
+
+			});
+		
+		});
+	</script>
+</html>

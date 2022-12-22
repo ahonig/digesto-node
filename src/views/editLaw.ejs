@@ -1,0 +1,283 @@
+<%- include ('partials/_header'); %>
+<%- include ('partials/_navMenu'); %>
+<%- include ('partials/_bodyUpper'); %>	
+<div id="content">
+	<div class="row">
+		<div class="col-xs-12 col-sm-7 col-md-7 col-lg-4">
+			<h1 class="page-title txt-color-blueDark">
+				<i class="fa fa-fw fa-list-ul"></i> 
+					Configuracion 
+				<span>> 
+					Editar Ley
+				</span>
+			</h1>
+		</div>
+    </div>
+	
+	<div class="alert alert-block alert-danger hidden">
+		<a class="close" data-dismiss="alert" href="#">×</a>
+		<h4 class="alert-heading">Error!</h4>
+		
+	</div>
+
+	<div class="alert alert-success alert-block hidden">
+		<a class="close" data-dismiss="alert" href="#">×</a>
+		<h4 class="alert-heading">Correcto!</h4>
+		Registro grabado.
+	</div>
+	
+    <section id="widget-grid" class="">
+        <div class="row">
+            <article class="col-sm-12 col-md-12 col-lg-12">
+                <div class="jarviswidget jarviswidget-color-blueDark" id="wid-id-1" data-widget-editbutton="false" data-widget-custombutton="false" data-widget-togglebutton="false" data-widget-deletebutton="false">
+                    <header>
+                        <span class="widget-icon"> <i class="fa fa-plus"></i> </span>
+                        <h2>Complete el formulario </h2>				
+                    </header>
+                    <div>
+                        <div class="jarviswidget-editbox">
+                        </div>
+                        <div class="widget-body">
+                            <form id="editLaw-form" class="" novalidate="novalidate" target="_self" method="POST" enctype="multipart/form-data">
+                                <fieldset>
+									<div class="row">
+										<div class="col-sm-12">
+											<div class="form-group">
+												<label>Nro. de Ley:</label>
+												<input type="text" name="leye_numero" placeholder="Ej.: 1234/2020" class="form-control" value="<%= ley.leye_numero %>">
+											</div>
+										</div>
+									</div>
+                                  
+									<div class="row">
+										<div class="col-sm-12">
+											<div class="form-group">
+												<label>T&iacute;tulo de Ley:</label>
+												<input type="text" name="leye_titulo" placeholder="Ej.: Ley sobre el limite del horario de venta de alcohol" class="form-control" value="<%= ley.leye_titulo %>">
+											</div>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<div class="select-group">
+											<label>Categor&iacute;a</label>
+											<select multiple name="cate_codigo" class="select2">
+												<% for(var i =0; i < categorias.length; i++){ %>
+													<option value="<%= categorias[i].cate_codigo %>" <%= (ley.cate_codigo.includes(categorias[i].cate_codigo) ? 'selected="selected"' : '') %> ><%= categorias[i].cate_codigo %> - <%= categorias[i].cate_descripcion %></option>	
+												<% } %>
+											</select> <i></i>
+										</div>
+									</div>
+
+									<div class="form-group">
+                                                                                <div class="select-group">
+                                                                                        <label>Texto Ordenado:</label>
+                                                                                        <select name="text_codigo" class="select2">
+                                                                                                <% for(var i =0; i < textos.length; i++){ %>
+                                                                                                        <option value="<%= textos[i].text_codigo %>" <%= (textos[i].text_codigo == ley.text_codigo ? 'selected="selected"' : '') %> > <%= textos[i].text_codigo %> - <%= textos[i].text_descripcion %></option>
+                                                                                                <% } %>
+                                                                                        </select> <i></i>
+                                                                                </div>
+                                                                        </div>
+                                   
+									
+									<div class="form-group">
+										<label>Fecha Sanci&oacute;n</label>
+										<div class="input-group">
+											<input type="text" name="leye_fecha_sancion" class="form-control" data-mask="99/99/9999" data-mask-placeholder= "-" value="<%= ley.leye_fecha_sancion %>">
+											<span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label>Fecha Promulgaci&oacute;n</label>
+										<div class="input-group">
+											<input type="text" name="leye_fecha_promulgacion" class="form-control" data-mask="99/99/9999" data-mask-placeholder= "-" value="<%= ley.leye_fecha_promulgacion %>">
+											<span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+										</div>
+									</div>
+
+									<div class="row">
+										<div class="col-sm-12">
+											<div class="form-group">
+												<label>Nombre Popular:</label>
+												<input type="text" name="leye_nombre_popular" placeholder="Ej.: Ley Seca" class="form-control" value="<%= ley.leye_nombre_popular %>">
+											</div>
+										</div>
+									</div>
+
+									<div class="row">
+										<div class="col-sm-12">
+											<div class="form-group">
+												<label>Contenido de la Ley:</label>
+												<textarea rows="10" type="text" name="leye_contenido" placeholder="Ej.: La ley define los horarios limites para la compra de alcohol en el territorio nacional" class="form-control"><%= ley.leye_contenido %></textarea>
+											</div>
+										</div>
+									</div>
+									
+									
+									<div class="form-group">
+										<label>Asociaciones</label>
+										<input name="leye_asociaciones" value="<%= ley.leye_asociaciones.toString() %>" class="form-control tagsinput" data-role="tagsinput">
+									</div>
+
+									<div class="form-group">
+										<label>Derogaciones/modificaciones</label>
+										<input name="leye_derogaciones" value="<%= ley.leye_derogaciones.toString() %>"  class="form-control tagsinput" data-role="tagsinput">
+									</div>
+									
+									<!--
+									<div class="form-group">
+										<label>Modificaciones</label>
+										<select multiple name="leye_modificaciones" class="select2">
+											<% for(var i =0; i < leyes.length; i++){ %>
+												<option value="<%= leyes[i].leye_numero %>" <%= ( ley.leye_modificaciones.includes( leyes[i].leye_numero) ? 'selected="selected"' : '' ) %> ><%= leyes[i].leye_numero %></option>	
+											<% } %>
+										</select> <i></i>
+									</div>
+									 <section class="smart-form">
+										<label class="label">Archivo Word</label>
+										<label for="file" class="input input-file">
+											<div class="button"><input type="file" id="file" accept=".doc,.docx" onchange="this.parentNode.nextSibling.value = this.value">Elegir</div><input type="text" name="leye_doc" readonly>
+										</label>
+										<div class="note">El archivo debe ser menor a 3Mb</div>
+									</section>
+
+									<section class="smart-form">
+										<label class="label">Archivo PDF</label>
+										<label for="file" class="input input-file">
+											<div class="button"><input type="file" id="file" accept=".pdf" onchange="this.parentNode.nextSibling.value = this.value">Elegir</div><input type="text" name="leye_pdf" readonly>
+										</label>
+										<div class="note">El archivo debe ser menor a 3Mb</div>
+									</section>
+									-->
+                                </fieldset>
+                                <footer>
+                                    <button type="submit" class="btn btn-primary">
+                                        Actualizar
+                                    </button>
+                                </footer>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+
+</div>
+<%- include ('partials/_bodyBottom'); %>	
+<style>
+	.has-error {
+		color: #b94a48;
+	}
+</style>
+<script src="/digesto/js/plugin/jquery-form/jquery-form.min.js"></script>
+<script src="/digesto/js/plugin/select2/select2.min.js"></script>
+<script src="/digesto/js/plugin/summernote/summernote.min.js"></script>
+
+<script>
+	$(document).ready(function() {
+
+		pageSetUp();
+
+		var errorClass = 'invalid';
+		var errorElement = 'em';
+		
+		var $addPublicationForm = $('#editLaw-form').validate({
+			errorClass		: errorClass,
+			errorElement	: errorElement,
+			highlight: function(element) {
+				$(element).parent().removeClass('state-success').addClass("state-error");
+				$(element).removeClass('valid');
+			},
+			unhighlight: function(element) {
+				$(element).parent().removeClass("state-error").addClass('state-success');
+				$(element).addClass('valid');
+			},
+
+		// Rules for form validation
+			rules : {
+				leye_numero : {
+					required : true
+				},
+				leye_titulo : {
+					required : true
+				},
+				leye_categoria : {
+					required : true
+				},
+				leye_fecha_sancion : {
+					required : true
+				}
+			},
+	
+			messages : {
+				leye_numero : {
+					required : "El numero es obligatorio"
+				},
+				leye_titulo : {
+					required : "El titulo es obligatorio"
+				},
+				leye_categoria : {
+					required : "La categoria es obligatoria"
+				},
+				leye_fecha_sancion : {
+					required : "La fecha de la sancion es obligatoria"
+				}
+			},
+	
+			// Do not change code below
+			errorPlacement : function(error, element) {
+				error.insertAfter(element.parent());
+			},
+			submitHandler: function(form) {
+
+				/*console.log("form 1: ", form);
+				console.log("form 2: ", $("#editLaw-form")[0]);*/
+
+				var formData = new FormData(form);
+				
+				$.ajax({
+					url: form.url,
+					type: "POST",
+					data: formData,
+					dataType: "json",
+					cache: false,
+					contentType: false,
+					processData: false,
+					success: function (result) {
+						$("[name='leye_numero']").focus();
+						if ( result.status == "ok"){
+							$(".alert-danger").addClass("hidden");
+							$(".alert-success").append(result.message);
+							$(".alert-success").toggleClass("hidden").delay( 2000 );
+							window.location.href = '/admin/laws';
+						} else {
+
+							$(".alert-danger").append(result.message);
+							$(".alert-danger").toggleClass("hidden").delay( 2000 );
+						}
+					},
+					error: function (err) {
+						$(".alert-danger").append(err);
+						$(".alert-danger").toggleClass("hidden").delay( 2000 );
+					}
+				});
+				return false;	
+			}
+		});
+
+		$("[name='leye_numero']").focus();
+
+		$("input").on("keydown", function (event) {
+			if (event.keyCode == 13) {
+			       $(this).next("input, textarea").focus();
+				event.preventDefault();
+      			}
+		});
+	});
+	
+</script>
+<%- include ('partials/_footer'); %>

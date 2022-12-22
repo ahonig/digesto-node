@@ -1,0 +1,35 @@
+<nav>
+	<ul>
+		<li class="<%= ( location.id == 'inicio' ? 'active' : '') %>">
+			<a href="/digesto/admin/"><i class="fa fa-lg fa-fw fa-home"></i> <span class="menu-item-parent">Inicio</span></a>
+        </li>
+        <li class="<%= ( location.parent == 'configuracion' ? 'open' : '') %>">
+			<a href="#"><i class="fa fa-lg fa-fw fa-gears"></i> <span class="menu-item-parent">Configuracion</span></a>
+			<ul>
+				<li class="<%= ( location.id == 'leyes' ? 'active' : '') %>">
+					<a href="/digesto/admin/laws"><i class="fa fa-lg fa-fw fa-gavel"></i>Leyes</a>
+				</li>
+				<li class="<%= ( location.id == 'categorias' ? 'active' : '') %>">
+					<a href="/digesto/admin/categories"><i class="fa fa-lg fa-fw fa-sitemap"></i>Categorias</a>
+				</li>
+				<li class="<%= ( location.id == 'textos' ? 'active' : '') %>">
+                                        <a href="/digesto/admin/texts"><i class="fa fa-lg fa-fw fa-sitemap"></i>Textos</a>
+                                </li>
+				<li class="<%= ( location.id == 'paginas' ? 'active' : '') %>">
+					<a href="/digesto/admin/pages"><i class="fa fa-lg fa-fw fa-book"></i>Paginas</a>
+				</li>
+				<li class="<%= ( location.id == 'publicaciones' ? 'active' : '') %>">
+					<a href="/digesto/admin/publications"><i class="fa fa-lg fa-fw fa-file-text-o"></i>Publicaciones</a>
+				</li>
+			</ul>
+		</li>
+		<li class="<%= ( location.parent == 'seguridad' ? 'open' : '') %>">
+			<a href="#"><i class="fa fa-lg fa-fw fa-lock"></i> <span class="menu-item-parent">Seguridad</span></a>
+			<ul>
+				<li class="<%= ( location.id == 'usuarios' ? 'active' : '') %>">
+					<a href="/digesto/admin/users"><i class="fa fa-lg fa-fw fa-user"></i>Usuarios</a>
+				</li>
+			</ul>
+		</li>
+	</ul>       
+</nav>

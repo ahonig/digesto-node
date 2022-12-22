@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+	  <%- include ('partials/public/_header'); %>
+	  <!-- ========== MAIN CONTENT ========== -->
+	  <main id="content" role="main">
+		
+		<div class="bg-primary">
+			<div class="container space-1">
+				<div class="row">
+					<div class="col-lg-5 mb-4 mb-lg-0">
+					  <!-- Input -->
+					  <label class="d-block">
+						<span class="h4 d-block text-white font-weight-semi-bold mb-0">Qu&eacute;</span>
+					  </label>
+					  <div class="js-focus-state">
+						<div class="input-group">
+						  <input type="text" class="form-control" id="valorBuscado" placeholder="Palabras clave o títulos" aria-label="Palabras clave o títulos" aria-describedby="keywordInputAddon">
+						  <div class="input-group-append">
+							<span class="input-group-text">
+							  <span class="fas fa-search" id="keywordInputAddon"></span>
+							</span>
+						  </div>
+						</div>
+					  </div>
+					  <!-- End Input -->
+					</div>
+
+					<div class="col-lg-5 mb-4 mb-lg-0">
+					  <!-- Input -->
+					  <label class="d-block">
+						<span class="h4 d-block text-white font-weight-semi-bold mb-0">d&oacute;nde</span>
+					  </label>
+					  <div class="js-focus-state">
+						<div class="input-group">
+						  <select class="form-control select2" id="tipoBusqueda">
+							<option value="todo">Todo</option>
+							<option value="titulo">Titulo y por palabra dentro de la Norma</option>
+							<option value="numero">Nro de norma</option>
+							<option value="nombre">Nombre Popular</option>
+							<option value="anho">Por año de Promulagación</option>
+						  </select>
+						</div>
+					  </div>
+					  <!-- End Input -->
+					</div>
+
+					<div class="col-lg-2 align-self-lg-end">
+						<a class="btn btn-sm btn-soft-white transition-3d-hover" id="btnBuscar" href="#">
+							<span class="fas fa-search small mr-2"></span>
+							Buscar
+						  </a>
+					</div>
+				  </div>
+			</div>
+		</div>
+
+		<div class="bg-light">
+			<div class="container space-2">
+			  <div class="row">
+				<div class="col-lg-3 mb-7 mb-lg-0">
+	 
+				  <!-- Categorias  -->
+				  <div class="card mb-4" >
+					<div class="card-header pt-4 pb-3 px-0 mx-4">
+					  <h2 class="h6 mb-0">Categor&iacute;as</h2>
+					</div>
+	  
+					<div class="card-body pt-3 pb-4 px-4">
+					<% 
+					if ( typeof categoriasNivel1 != 'undefined' ) { 
+						for(var i =0; i < categoriasNivel1.length; i++){ %>
+							<a class="d-flex align-items-start mb-4" style="margin-bottom: 0 !important;" href="/digesto/laws/categories/<%= categoriasNivel1[i].cate_codigo %>" target="_self">
+								<div class="ml-3">
+								<span class="d-block text-dark"> <%= categoriasNivel1[i].cate_codigo %>. <%= categoriasNivel1[i].cate_descripcion %>.</span>
+								</div>
+							</a>
+					<% 
+							 }
+					} %>
+
+					</div>
+				  </div>
+				  <!-- End Categorias -->
+				</div>
+			  <!-- Resultados -->
+
+			     <div class="card w-lg-75 mx-lg-auto mb-7">
+				<div class="text-center">
+					 <h1 class="h3 font-weight-semi-bold"> Ley 5282/14 Art 41 </h1>
+				</div>	
+				<div id="loader" class="text-center">
+                        	<hr>
+                           	<p> Designar la oficina del Digesto Legislativo de la Cámara de Senadores como órgano competente a los fines de la implementación del Art 9 Inc</p>
+			 	<p>A) De la ley Nro 5282/14 de Acceso a la información Pública y Transpariencia Gubernamental, en lo que refiere a las leyes de la República.</p>
+				<p align="center"><a href="http://digesto.senado.gov.py/resolucion_362.pdf" target="_blank">Resolución Nro 362 del 2016 Honorable Cámara de Senadores</a></p>
+                            	<hr>
+			    </div>	
+			  <!-- end Resultado -->
+			</div>
+		</div>
+	   
+	  </main>
+	  <!-- ========== END MAIN CONTENT ========== -->
+	  <%- include ('partials/public/_bottom'); %>
+
+	  <script>
+                $(document).on('ready', function () { 
+                
+                        
+                        
+                        $("#btnBuscar").click(
+                                function() {
+                                        
+                                        var valor = $("#valorBuscado").val();
+                                        var tipo = $("#tipoBusqueda").val();
+       					if ( !valor ) { 
+						alert("Debe cargar un valor para buscar");
+						$("#valorBuscado").focus();
+						return false;
+					}                         
+                                        window.location.href = "/digesto/results/"+tipo+"/"+valor;
+                                        
+                                }
+                        );
+                
+                });
+        </script>
+</html>
