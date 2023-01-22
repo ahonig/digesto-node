@@ -25,7 +25,7 @@ app.set('view engine','ejs');
 
 
 //middlewares
-app.use(session({secret: 'dig3sto_S3cre3t',saveUninitialized: true, resave: true}));
+app.use(session({secret: '******',saveUninitialized: true, resave: true}));
 app.use(morgan('dev'));
 app.use(express.urlencoded({limit: '50mb', extended: true}));
 app.use(express.static(__dirname + '/views/static', {maxAge: oneHour }));
